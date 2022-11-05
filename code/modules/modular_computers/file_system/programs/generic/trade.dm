@@ -23,7 +23,7 @@
 	program_menu_icon = "cart"
 	extended_desc = "A trade tool, requires sending and receiving beacons."
 	size = 21
-	available_on_ntnet = FALSE
+	available_on_ntnet = TRUE //Coffe edit. Request from Ryterator. Makes some sense for trading(since we can build beacons). A treason against the cargo. Who cares...
 	requires_ntnet = TRUE
 	clone_able = FALSE
 	copy_cat = TRUE
