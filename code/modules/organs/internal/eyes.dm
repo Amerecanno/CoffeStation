@@ -30,8 +30,8 @@
 	desc = "A single, alien eye. It allows Mar'Qua to see."
 
 /obj/item/organ/internal/eyes/marqua/get_icon()
-	var/icon/eyes_icon = new/icon('icons/mob/human_face.dmi', "eye_marqua")
-	eyes_icon.Blend(icon('icons/mob/human_face.dmi',"eye_marqua"), ICON_OVERLAY)
+	var/icon/eyes_icon = new/icon('icons/mob/human_face.dmi', "skrell_eyes_s")
+	eyes_icon.Blend(icon('icons/mob/human_face.dmi',"skrell_eyes_s"), ICON_OVERLAY)
 	eyes_icon.Blend(BP_IS_ROBOTIC(src) ? robo_color : eyes_color, ICON_ADD)
 	return eyes_icon
 
