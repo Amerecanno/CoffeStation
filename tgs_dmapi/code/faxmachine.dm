@@ -51,11 +51,12 @@
 
 	send2chat(msg_content, optional_channel)
 
-	var/sender_name = sender ? sender.name : "[NULL sender]"
+	var/sender_name = sender ? "[sender.name]" : "Unknown"
 	var/fax_content = ""
 
 	if (istype(fax_item, /obj/item/paper))
-		fax_content = "[fax_item.info]"
+		var/obj/item/paper/P = fax_item
+		fax_content = "[P.info]"
 	else if (istype(fax_item, /obj/item/photo))
 		fax_content = "[fax_item.name] (Photo)"
 	else if (istype(fax_item, /obj/item/paper_bundle))

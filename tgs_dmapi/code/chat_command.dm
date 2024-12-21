@@ -21,9 +21,9 @@
 
 	P.loc = locate("Admin Fax"):loc
 
-	var/msg_for_admins = "[sender.friendly_name] отправил(а) факс из Discord в департамент [department]."
+	var/msg_for_admins = "[sender.friendly_name] отправил(а) факс [P] из Discord в департамент [department]."
 	message_admins(null, "DISCORD FAX", P, department, "#006100")
-	log_world("[time2text(world.timeofday)] (Discord->Game fax) sender=[sender.friendly_name], department=[department], text=\"[fax_text]\"")
+	log_world(msg_for_admins)
 
 
 	return new /datum/tgs_message_content("Discord fax was successfully delivered to [department].")
