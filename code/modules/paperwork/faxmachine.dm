@@ -157,9 +157,17 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 	if (success)
 		visible_message("[src] beeps, \"Message transmitted successfully.\"")
+		var/text_for_discord = ""
+		var/stamps_text = ""
+		if(istype(copyitem, /obj/item/paper))
+				var/obj/item/paper/P = copyitem
+				text_for_discord = "[P.info]"
+				stamps_text = "[P.stamps]"
+		send_discord_fax(usr, "Факс в отдел «[destination]»", text_for_discord, stamps_text, TRUE)
 		//sendcooldown = 600
 	else
 		visible_message("[src] beeps, \"Error transmitting message.\"")
+
 
 /obj/machinery/photocopier/faxmachine/proc/recievefax(var/obj/item/incoming)
 	if(stat & (BROKEN|NOPOWER))
@@ -209,8 +217,13 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	//message badmins that a fax has arrived
 	var/datum/faction/dept = GLOB.admin_factions_list[destination]
 	message_admins(sender, dept.fax_alert, rcvdcopy, destination, dept.darkcolor)
-	send_fax_embed_discord(sender, rcvdcopy, "[destination] (Admin Fax)")
-
+	var/text_for_discord = ""
+	var/stamps_text = ""
+	if(istype(copyitem, /obj/item/paper))
+		var/obj/item/paper/P = copyitem
+		text_for_discord = "[P.info]"
+		stamps_text = "[P.stamps]"
+	send_discord_fax(sender, "Админ-факс в [destination]", rcvdcopy.info, rcvdcopy.stamps, TRUE)
 	sendcooldown = 1800
 	sleep(50)
 	visible_message("[src] beeps, \"Message transmitted successfully.\"")

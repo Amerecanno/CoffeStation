@@ -1,67 +1,33 @@
-/obj/machinery/photocopier/faxmachine/proc/send_fax_embed_discord(
+/obj/machinery/photocopier/faxmachine/proc/send_discord_fax(
 	var/mob/sender,
-	var/obj/item/fax_item,
-	var/department,		  // Чтобы в тексте указать, куда был направлен факс
-	var/optional_channel = "status" // Имя чата в TGS, куда отправляем
+	var/fax_title = "Новый факс",
+	var/fax_text = "Пустое сообщение",
+	var/fax_stamps = "",
+	var/is_admin = FALSE
 )
-	/*
-		sender		- тот, кто отправил факс
-		fax_item	  - фактический объект бумаги/фото/бандла
-		department	- название департамента (или "Admin Fax")
-		optional_channel - канальный тег, куда уйдёт сообщение. Можно сделать гибким.
-	*/
 
-	var/title_text = "[department] Fax"
-	var/body_text = ""
-	body_text += "**Отправитель**: [sender ? sender.name : "Unknown"]\n"
-	body_text += "**Департамент**: [department]\n\n"
-
-	if (istype(fax_item, /obj/item/paper))
-		var/obj/item/paper/P = fax_item
-		body_text += "[P.info]\n"
-		if (P.stamps)
-			body_text += "\n_Stamps:_ [P.stamps]\n"
-	else if (istype(fax_item, /obj/item/photo))
-		var/obj/item/photo/Ph = fax_item
-		body_text += "Получена фотография: [Ph.name].\n"
-		if (Ph.scribble)
-			body_text += "\n_Scribble:_ [Ph.scribble]\n"
-	else if (istype(fax_item, /obj/item/paper_bundle))
-		var/obj/item/paper_bundle/B = fax_item
-		body_text += "Получен бумажный бандл: [B.name], [B.pages.len] страниц.\n"
-	else
-		body_text += "Неизвестный тип вложения.\n"
-
+	var/datum/tgs_message_content/msg_content = new("")
 	var/datum/tgs_chat_embed/structure/embed = new()
-	embed.title = title_text
-	embed.description = body_text
-	embed.colour = "#34a5c2"
-	embed.timestamp = time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")
-
-	var/datum/tgs_chat_embed/provider/author/author_obj = new("Fax Machine")
-	author_obj.icon_url = "https://icon-library.com/images/fax-icon/fax-icon-14.jpg"
-	embed.author = author_obj
-
-	var/datum/tgs_chat_embed/footer/footer_obj = new("SS13 Fax Integration")
-	footer_obj.icon_url = "https://icon-library.com/images/fax-icon/fax-icon-14.jpg"
-	embed.footer = footer_obj
-
-	var/datum/tgs_message_content/msg_content = new()
 	msg_content.embed = embed
 
-	send2chat(msg_content, optional_channel)
+	var/datum/tgs_chat_embed/provider/author/embed_author = new("[key_name(sender)]")
+	embed_author.icon_url = "https://icon-library.com/images/fax-icon/fax-icon-14.jpg"
+	embed.author = embed_author
 
-	var/sender_name = sender ? "[sender.name]" : "Unknown"
-	var/fax_content = ""
+	embed.title = (is_admin ? "[fax_title] (админский)" : fax_title)
 
-	if (istype(fax_item, /obj/item/paper))
-		var/obj/item/paper/P = fax_item
-		fax_content = "[P.info]"
-	else if (istype(fax_item, /obj/item/photo))
-		fax_content = "[fax_item.name] (Photo)"
-	else if (istype(fax_item, /obj/item/paper_bundle))
-		fax_content = "[fax_item.name] (Bundle)"
-	else
-		fax_content = "[fax_item]"
+	embed.description = "[fax_text]\n\n*Штампы:* [fax_stamps]"
 
-	log_world("[time2text(world.timeofday)] (Game->Discord fax) sender=[sender_name], department=[department], content=\"[fax_content]\"")
+	embed.colour = is_admin ? "#ff0000" : "#34a5c2"
+
+	embed.timestamp = time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")
+
+	var/datum/tgs_chat_embed/footer/embed_footer = new("Fax Machine v1.0")
+	embed_footer.icon_url = "https://icon-library.com/images/fax-icon/fax-icon-14.jpg"
+	embed.footer = embed_footer
+
+	var/channel_to_send = is_admin ? config.channel_admin_faxes : config.channel_regular_faxes
+
+	send2chat(msg_content, channel_to_send)
+
+	to_chat(sender, "Ваш факс отправлен в дискорд. [is_admin ? "(Админский)" : ""]")

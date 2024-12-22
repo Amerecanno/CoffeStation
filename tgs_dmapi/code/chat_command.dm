@@ -1,29 +1,34 @@
 /datum/tgs_chat_command/fax
 	name = "fax"
-	help_text = "Отправить факс из Discord в игру. Пример: discordfax department='Command' text='Hello from Discord!'"
-	admin_only = TRUE
+	help_text = "Отправить факс в игре из дискорда. Пример: !fax destination=Engineering text='Привет' signature='Captain' stamps='NT Official'"
+	admin_only = FALSE
 
 /datum/tgs_chat_command/fax/Run(datum/tgs_chat_user/sender, params)
-	var/department = "[params["department"]]"
-	if (!department || department == "")
-		department = "Admin Fax"
+	var/dest = params["destination"]
+	var/fax_text = params["text"]
+	var/signature_text = params["signature"]
+	var/stamps_text = params["stamps"]
 
-	var/fax_text = "[params["text"]]"
-	if (!fax_text || fax_text == "")
-		fax_text = "(пустое сообщение)"
+	if(!dest || !fax_text)
+		return new /datum/tgs_message_content("Ошибка: нужно указать как минимум destination и text.")
+
+	var/final_text = "[fax_text]\n\n_*[signature_text]*_"
 
 	var/obj/item/paper/P = new
-	P.name = "DS Fax"
-	P.info = "[fax_text]"
+	P.name = "Fax from Discord"
+	P.info = final_text
 
-	var/fax_stamp = "Sent by [sender.friendly_name]"
-	P.stamps += "[fax_stamp]"
+	if(stamps_text)
+		P.stamp("[stamps_text]", "paper_stamp-circle", 0, -2, 2, -1)
 
-	P.loc = locate("Admin Fax"):loc
+	var/sent_ok = 0
+	for(var/obj/machinery/photocopier/faxmachine/F in allfaxes)
+		if(F.department == dest)
+			F.copyitem = P
+			if(F.recievefax(P))
+				sent_ok = 1
 
-	var/msg_for_admins = "[sender.friendly_name] отправил(а) факс [P] из Discord в департамент [department]."
-	message_admins(null, "DISCORD FAX", P, department, "#006100")
-	log_world(msg_for_admins)
-
-
-	return new /datum/tgs_message_content("Discord fax was successfully delivered to [department].")
+	if(sent_ok)
+		return new /datum/tgs_message_content("Факс успешно отправлен в департамент [dest].")
+	else
+		return new /datum/tgs_message_content("Не удалось найти факс-машину для [dest] или отправка не удалась.")
