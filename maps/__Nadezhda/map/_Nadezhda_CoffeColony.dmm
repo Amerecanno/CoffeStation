@@ -38,8 +38,11 @@
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/maintenance/undergroundfloor2north)
 "aax" = (
-/obj/item/trash/liquidfood,
-/turf/simulated/floor/rock/manmade/road,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/under,
 /area/nadezhda/outside/inside_colony)
 "aaA" = (
 /obj/structure/table/standard,
@@ -2364,10 +2367,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/road/straight3{
-	pixel_x = 2;
-	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
@@ -4784,6 +4783,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/bcarpet,
 /area/nadezhda/maintenance/undergroundfloor1north)
+"aZV" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/big/bush2,
+/turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/inside_colony)
 "bab" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/recharge_station/upgraded_t_three,
@@ -6112,12 +6116,9 @@
 /turf/simulated/floor/plating/under,
 /area/nadezhda/command/hallway)
 "bmt" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/random/flora/jungle_tree,
-/turf/simulated/floor/asteroid/grass,
+/obj/item/trash/liquidfood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "bmF" = (
 /obj/structure/table/standard{
@@ -13371,10 +13372,10 @@
 /turf/simulated/floor/tiled/white/gray_platform,
 /area/nadezhda/crew_quarters/dorm4)
 "cMr" = (
-/obj/machinery/camera/network/colony_surface{
-	dir = 8
+/obj/structure/multiz/stairs/enter/bottom{
+	dir = 4
 	},
-/turf/simulated/floor/rock/manmade/road,
+/turf/simulated/floor/tiled/dark/techfloor,
 /area/nadezhda/outside/inside_colony)
 "cMs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26044,14 +26045,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/nadezhda/engineering/atmos/surface)
 "fjQ" = (
-/obj/effect/floor_decal/industrial/road/straight4{
-	pixel_y = 12
-	},
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/department/medbay{
 	name = "TRIAGE";
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "fjT" = (
@@ -32772,6 +32770,14 @@
 	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/maintenance/undergroundfloor1north)
+"gyl" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/railing,
+/turf/simulated/floor/plating/under,
+/area/nadezhda/outside/inside_colony)
 "gyv" = (
 /obj/machinery/gym,
 /obj/effect/decal/cleanable/dirt,
@@ -42071,9 +42077,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/dungeon/outside/abandoned_outpost)
 "isb" = (
-/obj/effect/floor_decal/industrial/road/straight1{
-	pixel_x = -12;
-	pixel_y = -2
+/obj/machinery/camera/network/colony_surface{
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
@@ -43553,7 +43558,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/blast/shutters{
-	id = "MedbayEMTup";
+	id = "MedbayEMT";
 	dir = 4;
 	name = "Emergency Medical Treatment"
 	},
@@ -47395,6 +47400,13 @@
 	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/command/hallway)
+"jtH" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/inside_colony)
 "jtI" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -54967,6 +54979,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/violetcorener,
 /area/nadezhda/rnd/lab)
+"kTw" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/under,
+/area/nadezhda/outside/inside_colony)
 "kTC" = (
 /obj/machinery/door/airlock{
 	name = "Toilet"
@@ -55131,13 +55153,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/pond)
-"kVb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/road/straight4{
-	pixel_y = 12
-	},
-/turf/simulated/floor/rock/manmade/road,
-/area/nadezhda/outside/inside_colony)
 "kVl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
@@ -62420,10 +62435,6 @@
 /turf/simulated/floor/rock,
 /area/nadezhda/maintenance/undergroundfloor1north)
 "msI" = (
-/obj/effect/floor_decal/industrial/road/curve2{
-	pixel_x = -12;
-	pixel_y = -12
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -62848,17 +62859,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel/orangecorner,
 /area/nadezhda/security/prisoncells)
-"mye" = (
-/obj/machinery/camera/network/colony_surface{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/road/straight2{
-	pixel_x = 12;
-	pixel_y = -2
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/rock/manmade/road,
-/area/nadezhda/outside/inside_colony)
 "myh" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -63552,14 +63552,10 @@
 /turf/simulated/floor/tiled/dark/bluecorner,
 /area/nadezhda/security/sechall)
 "mEU" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plating/under,
+/obj/effect/floor_decal/industrial/warningwhite,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "mEW" = (
 /obj/random/closet_maintloot,
@@ -68485,12 +68481,31 @@
 /turf/simulated/floor/tiled/dark/monofloor,
 /area/nadezhda/command/teleporter)
 "nCk" = (
-/obj/structure/railing{
-	dir = 4
+/obj/effect/window_lwall_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "MedbayTotalLockdown";
+	layer = 2.6;
+	name = "Medbay Total Lockdown";
+	opacity = 0
 	},
-/obj/random/flora/jungle_tree,
-/turf/simulated/floor/asteroid/dirt,
-/area/nadezhda/outside/inside_colony)
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "MedbayTotalLockdown";
+	layer = 2.6;
+	name = "Medbay Total Lockdown";
+	opacity = 0
+	},
+/obj/machinery/door/blast/shutters{
+	id = "MedbayEMTup";
+	dir = 4;
+	name = "Emergency Medical Treatment"
+	},
+/turf/simulated/floor/plating,
+/area/nadezhda/medical/cryo)
 "nCl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -72827,7 +72842,7 @@
 	opacity = 0
 	},
 /obj/machinery/door/blast/shutters{
-	id = "MedbayEMTup";
+	id = "MedbayEMT";
 	dir = 4;
 	name = "Emergency Medical Treatment"
 	},
@@ -76000,14 +76015,11 @@
 /turf/simulated/floor/wood,
 /area/nadezhda/security/barracks)
 "oYj" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/plating/under,
+/obj/effect/floor_decal/industrial/warningwhite,
+/obj/structure/invislight,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "oYk" = (
 /obj/structure/catwalk,
@@ -78977,17 +78989,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet,
 /area/nadezhda/crew_quarters/bar)
-"pCc" = (
-/obj/structure/sign/department/medbay{
-	name = "TRIAGE";
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/industrial/road/straight4{
-	pixel_y = 12
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/rock/manmade/road,
-/area/nadezhda/outside/inside_colony)
 "pCf" = (
 /obj/machinery/light{
 	dir = 1
@@ -80168,13 +80169,11 @@
 /turf/simulated/floor/tiled/steel/brown_platform,
 /area/nadezhda/command/panic_room)
 "pNS" = (
-/obj/effect/floor_decal/industrial/road/straight4{
-	pixel_y = 12
-	},
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/wallmed/lobby{
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "pNU" = (
@@ -84986,6 +84985,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/inside_colony)
 "qKW" = (
@@ -85612,6 +85612,7 @@
 /turf/simulated/floor/plating,
 /area/nadezhda/rnd/xenobiology)
 "qRx" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/techfloor,
 /area/nadezhda/outside/inside_colony)
 "qRL" = (
@@ -92738,31 +92739,16 @@
 	name = "\improper Outdoors - Pad"
 	})
 "soL" = (
-/obj/effect/window_lwall_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "MedbayTotalLockdown";
-	layer = 2.6;
-	name = "Medbay Total Lockdown";
-	opacity = 0
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 8;
+	tag = "icon-railing0 (WEST)"
 	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "MedbayTotalLockdown";
-	layer = 2.6;
-	name = "Medbay Total Lockdown";
-	opacity = 0
+/obj/structure/railing{
+	dir = 1
 	},
-/obj/machinery/door/blast/shutters{
-	id = "MedbayEMTup";
-	dir = 4;
-	name = "Emergency Medical Treatment"
-	},
-/turf/simulated/floor/plating,
-/area/nadezhda/medical/cryo)
+/turf/simulated/floor/plating/under,
+/area/nadezhda/outside/inside_colony)
 "soO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -96896,9 +96882,8 @@
 /turf/simulated/floor/tiled/dark/danger,
 /area/nadezhda/rnd/lab)
 "tgg" = (
-/obj/structure/flora/ausbushes/ywflowers,
-/obj/random/flora/jungle_tree,
-/turf/simulated/floor/asteroid/grass,
+/obj/structure/flora/big/rocks3,
+/turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/inside_colony)
 "tgi" = (
 /obj/random/flora/jungle_tree,
@@ -102462,11 +102447,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "ufP" = (
-/obj/structure/multiz/stairs/enter/bottom{
+/obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/road/straight2,
-/turf/simulated/floor/asteroid/dirt,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/under,
 /area/nadezhda/outside/inside_colony)
 "ufR" = (
 /obj/random/closet_tech/low_chance,
@@ -112986,8 +112971,9 @@
 	req_access = list(5);
 	name = "Emergency Medical Treatment"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
-/area/nadezhda/outside/inside_colony)
+/area/nadezhda/medical/cryo)
 "whU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel/cyancorner,
@@ -115349,14 +115335,15 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/nadezhda/rnd/xenobiology/xenoflora)
 "wFA" = (
-/obj/effect/floor_decal/industrial/road/curve1{
-	pixel_x = 12;
-	pixel_y = -12
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/road/straight3{
+	pixel_x = 2;
+	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/rock/manmade/road,
@@ -123233,13 +123220,12 @@
 /turf/simulated/floor/industrial/black_large_slates,
 /area/nadezhda/maintenance/undergroundfloor2east)
 "ykv" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	tag = "icon-railing0 (NORTH)"
-	},
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/inside_colony)
@@ -218008,8 +217994,8 @@ mFq
 pNi
 uqW
 bXS
-bXS
-mEU
+soL
+aQq
 aQq
 aQq
 aQq
@@ -218210,7 +218196,7 @@ mFq
 mFq
 dTD
 mrk
-iwM
+hJm
 kgI
 xkh
 mNh
@@ -220835,7 +220821,7 @@ pFV
 sSy
 gvt
 gbH
-oYj
+krM
 hJm
 gAS
 uGX
@@ -221037,14 +221023,14 @@ oJx
 gkx
 jGC
 gbH
-fFO
-ykv
-rJT
-rJT
-rJT
-rJT
-rJT
-rJT
+aax
+hJm
+hJm
+hJm
+hJm
+hJm
+hJm
+hJm
 hJm
 hJm
 hJm
@@ -221239,20 +221225,20 @@ pWV
 kNv
 gvt
 fMO
-pfy
-hcX
-tgg
-tBq
-fFO
-pfy
-pfy
-pFV
-ykv
+kTw
 rJT
-ufP
-ufP
+rJT
+rJT
 rJT
 csK
+cMr
+cMr
+ykv
+ufP
+ufP
+ufP
+ufP
+gyl
 pfy
 pFV
 mGO
@@ -221442,19 +221428,19 @@ unh
 jGC
 msI
 isb
-lGE
-lGE
-lGE
-lGE
-lGE
-lGE
-lGE
-lGE
-lGE
+mFq
+gvt
+gvt
 mFq
 mFq
 mFq
-uqW
+gvt
+mFq
+mFq
+mFq
+mFq
+jGC
+mEU
 cXf
 toQ
 bXS
@@ -221643,19 +221629,19 @@ fLu
 hOt
 jGC
 wFA
-mye
-vGK
-mFq
-mFq
-vGK
-vGK
-mFq
-mFq
-vGK
-vGK
-vGK
-vGK
-sht
+cwC
+cwC
+sbA
+sbA
+fwM
+cwC
+sbA
+sbA
+lGy
+nCk
+nCk
+lGy
+fjQ
 uqW
 hKK
 hKK
@@ -221846,18 +221832,18 @@ sSy
 gvt
 iPR
 cwC
-cwC
-sbA
-sbA
-fwM
-cwC
-sbA
-sbA
-lGy
-soL
-soL
-lGy
-pCc
+eTX
+bfx
+mFq
+eTX
+eTX
+mFq
+pNi
+tuN
+gSF
+gSF
+lXy
+gvt
 qKI
 amB
 mWf
@@ -222048,19 +222034,19 @@ qAL
 jGC
 iPR
 cwC
-eTX
-bfx
-pNi
-eTX
-eTX
-pNi
-pNi
+hIn
+gvt
+bmt
+vln
+fwK
+mFq
+mFq
 tuN
-gSF
-gSF
-lXy
-kVb
-iPR
+tdw
+tdw
+tuN
+gvt
+msI
 pHc
 pHc
 ukf
@@ -222249,20 +222235,20 @@ pWV
 uNq
 jGC
 iPR
-cwC
-hIn
-pNi
-aax
-vln
-fwK
-pNi
-pNi
-tuN
-tdw
-tdw
-tuN
-hOt
-iPR
+snz
+vlB
+gvt
+mFq
+qRx
+qRx
+gvt
+mFq
+lGy
+lAd
+aQX
+lGy
+pNS
+msI
 pHc
 voe
 wbg
@@ -222452,19 +222438,19 @@ unh
 jGC
 cMQ
 snz
-vlB
+nBm
+mFq
 pNi
-pNi
-qRx
-qRx
-pNi
-pNi
+sKe
+wql
+mFq
+mFq
 lGy
-lAd
-aQX
+hdd
+fOm
 lGy
-pNS
-iPR
+fjQ
+msI
 ukf
 kmE
 wCk
@@ -222653,19 +222639,19 @@ rIK
 hOt
 jGC
 iPR
-snz
+cwC
 nBm
-pNi
-pNi
+mFq
+mFq
+xEA
 sKe
-wql
-pNi
-pNi
-lGy
-hdd
-fOm
-lGy
-fjQ
+mFq
+mFq
+mFq
+whS
+mFq
+nye
+gvt
 ayL
 pHc
 iaA
@@ -222856,19 +222842,19 @@ hOt
 gvt
 cMQ
 cwC
-nBm
-pNi
-pNi
-xEA
-sKe
-pNi
-pNi
-pNi
-whS
-pNi
-nye
+tSO
 mFq
-iPR
+mFq
+wql
+wql
+isb
+mFq
+mFq
+mFq
+gvt
+oYj
+jGC
+msI
 pHc
 pHc
 kXG
@@ -223058,19 +223044,19 @@ hOt
 gvt
 cMQ
 cwC
-tSO
-pNi
-pNi
-wql
-wql
-cMr
-pNi
-pNi
-pNi
-pNi
-nye
+cwC
+cwC
+snz
+snz
+cwC
+cwC
+cwC
+cwC
+ldu
+ldu
+cwC
 mFq
-iPR
+msI
 bGt
 maP
 eIG
@@ -223259,20 +223245,20 @@ bXS
 hOt
 gvt
 cMQ
-cwC
-cwC
-cwC
-snz
-snz
-cwC
-cwC
-cwC
-cwC
-ldu
-ldu
-cwC
-hOt
-iPR
+fFO
+bUO
+pFV
+igM
+aZV
+pFV
+fLu
+fFO
+tgg
+fFO
+pFV
+fLu
+mFq
+msI
 bGt
 uRX
 gqb
@@ -223463,18 +223449,18 @@ mFq
 cMQ
 pxl
 pxl
+jtH
 pxl
 pxl
 pxl
-nCk
 pxl
 pxl
 pxl
 csA
 jmW
-bmt
-hOt
-iPR
+jmW
+mFq
+msI
 bGt
 bGt
 bGt
@@ -223675,7 +223661,7 @@ cih
 cih
 cih
 cih
-sdl
+glU
 wue
 cih
 cih
@@ -223878,7 +223864,7 @@ rpk
 rpk
 rpk
 gvt
-gvt
+jGC
 rpk
 rpk
 rpk
@@ -224080,7 +224066,7 @@ gvt
 mFq
 gvt
 gvt
-gvt
+jGC
 gvt
 mFq
 gvt
@@ -224282,7 +224268,7 @@ gvt
 mFq
 gvt
 gvt
-gvt
+jGC
 gvt
 mFq
 gvt
