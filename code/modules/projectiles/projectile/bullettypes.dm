@@ -341,9 +341,9 @@
 
 /obj/item/projectile/bullet/light_rifle_257
 	icon_state = "bullet_carbine"
-	damage_types = list(BRUTE = 21)
+	damage_types = list(BRUTE = 25)
 	armor_divisor = 1
-	wounding_mult = WOUNDING_SMALL
+	wounding_mult = WOUNDING_NORMAL
 	penetrating = 1
 	can_ricochet = TRUE
 	step_delay = 0.3
@@ -361,7 +361,7 @@
 	recoil = 4
 
 /obj/item/projectile/bullet/light_rifle_257/hv
-	damage_types = list(BRUTE = 17)
+	damage_types = list(BRUTE = 19)
 	armor_divisor = 2.5
 	penetrating = 2
 	hitscan = TRUE
@@ -407,9 +407,9 @@
 
 /obj/item/projectile/bullet/light_rifle_257/lethal
 	name = "hollow-point bullet"
-	damage_types = list(BRUTE = 17)
+	damage_types = list(BRUTE = 19)
 	armor_divisor = 0.5
-	wounding_mult = WOUNDING_SERIOUS
+	wounding_mult = WOUNDING_WIDE
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = TRUE
@@ -432,7 +432,7 @@
 	recoil = 7
 
 /obj/item/projectile/bullet/light_rifle_257/scrap
-	damage_types = list(BRUTE = 14)
+	damage_types = list(BRUTE = 15)
 	armor_divisor = 0.5
 	affective_damage_range = 4
 	affective_ap_range = 4
@@ -444,7 +444,7 @@
 /// 7.62x39mm Rifle ///
 
 /obj/item/projectile/bullet/rifle_75
-	damage_types = list(BRUTE = 25)
+	damage_types = list(BRUTE = 27)
 	armor_divisor = 1.25
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 1
@@ -455,7 +455,7 @@
 	recoil = 10
 
 /obj/item/projectile/bullet/rifle_75/hv
-	damage_types = list(BRUTE = 19)
+	damage_types = list(BRUTE = 21)
 	armor_divisor = 3
 	penetrating = 2
 	hitscan = TRUE
@@ -508,9 +508,9 @@
 
 /obj/item/projectile/bullet/rifle_75/lethal
 	name = "hollow-point bullet"
-	damage_types = list(BRUTE = 19)
+	damage_types = list(BRUTE = 21)
 	armor_divisor = 0.65
-	wounding_mult = WOUNDING_WIDE
+	wounding_mult = WOUNDING_EXTREME
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = TRUE
@@ -531,7 +531,7 @@
 	recoil = 9
 
 /obj/item/projectile/bullet/rifle_75/scrap
-	damage_types = list(BRUTE = 14)
+	damage_types = list(BRUTE = 17)
 	armor_divisor = 0.5
 	affective_damage_range = 3
 	affective_ap_range = 3
@@ -541,9 +541,9 @@
 
 /obj/item/projectile/bullet/heavy_rifle_408
 	icon_state = "bullet_heavy"
-	damage_types = list(BRUTE = 28)
+	damage_types = list(BRUTE = 30)
 	armor_divisor = 1.4
-	wounding_mult = WOUNDING_SERIOUS
+	wounding_mult = WOUNDING_WIDE
 	penetrating = 2
 	can_ricochet = TRUE
 	step_delay = 0.3
@@ -578,7 +578,7 @@
 
 /obj/item/projectile/bullet/heavy_rifle_408/hv
 	name = "sabot penetrator"
-	damage_types = list(BRUTE = 20)
+	damage_types = list(BRUTE = 24)
 	armor_divisor = 3.5
 	penetrating = 3
 	hitscan = TRUE
@@ -590,9 +590,9 @@
 
 /obj/item/projectile/bullet/heavy_rifle_408/lethal
 	name = "hollow-point bullet"
-	damage_types = list(BRUTE = 20)
+	damage_types = list(BRUTE = 24)
 	armor_divisor = 0.7
-	wounding_mult = WOUNDING_WIDE
+	wounding_mult = WOUNDING_DEVESTATING
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = TRUE
@@ -614,7 +614,7 @@
 	recoil = 15
 
 /obj/item/projectile/bullet/heavy_rifle_408/scrap
-	damage_types = list(BRUTE = 15)
+	damage_types = list(BRUTE = 20)
 	armor_divisor = 0.75
 	affective_damage_range = 4
 	affective_ap_range = 4
@@ -623,7 +623,7 @@
 ///Snowflake  ///
 
 /obj/item/projectile/bullet/c10x24
-	damage_types = list(BRUTE = 20)
+	damage_types = list(BRUTE = 25)
 	armor_divisor = 2
 	wounding_mult = WOUNDING_SMALL
 	penetrating = 2
