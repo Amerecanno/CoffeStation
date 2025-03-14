@@ -6,6 +6,9 @@
 		list(24, 26),
 		list(30, 30)
 	)
+
+	icon_states = list("capital", "station")
+
 	uid = "asterstradecapital"
 	tree_x = 0.58
 	tree_y = 0.9
@@ -22,7 +25,7 @@
 			/obj/item/clothing/suit/storage/hazardvest,
 			/obj/item/storage/pouch/small_generic,
 			/obj/item/storage/pouch/ammo,
-			/obj/item/storage/belt/utility,
+			/obj/item/storage/belt/utility = good_data("empty toolbelt", list(5, 20), 70),
 			/obj/item/device/lighting/toggleable/flashlight,
 			/obj/item/device/lighting/toggleable/flashlight/heavy,
 			/obj/item/device/lightreplacer,
@@ -57,7 +60,7 @@
 			/obj/item/cell/large/high,
 			/obj/item/cell/large/super
 		),
-		"Lonestar Grenade" = list(
+		"Lonestar Grenades" = list(
 			/obj/item/grenade/chem_grenade/antiweed,
 			/obj/item/grenade/chem_grenade/cleaner,
 			/obj/item/grenade/chem_grenade/metalfoam
@@ -113,7 +116,7 @@
 			/obj/item/ammo_magazine/ammobox/pistol_35/rubber
 		),
 		"Solnishko 'Guns-from-Home' Parts" = list(
-			/obj/item/computer_hardware/hard_drive/portable/design/gun_parts/bootleg = good_data("Solnishko Distrubtion - Homemade Parts", list(1, 1), 600),
+			/obj/item/pc_part/drive/disk/design/gun_parts/bootleg = good_data("Solnishko Distrubtion - Homemade Parts", list(1, 1), 600),
 			/obj/item/part/gun/grip/wood,
 			/obj/item/part/gun/mechanism/pistol,
 			/obj/item/part/gun/mechanism/revolver,
@@ -196,7 +199,7 @@
 
 	offer_types = list(
 		/obj/item/tool/knife = offer_data("spare knifes", 30, 20),
-		/obj/item/reagent_containers/food/snacks/grown = offer_data("spare grown food", 10, 120), //10 credits a grown item basicl
+		/obj/item/reagent_containers/snacks/grown = offer_data("spare grown food", 10, 120), //10 credits a grown item basicl
 		/datum/reagent/organic/nutriment/honey = offer_data("Honey bottle (60u)", 800, 1),
 		/obj/item/organ/external/robotic/one_star = offer_data("grayson external prosthetic", 1800, 4),
 		/obj/item/toy/consumer/product/toaster = offer_data("toolbox toaster", 250, 4)

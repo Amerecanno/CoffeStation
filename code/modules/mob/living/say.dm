@@ -421,7 +421,7 @@ mob/proc/format_say_message(var/message = null)
 	if(!(language && language.flags&INNATE) && !(verb == "reports")) // skip understanding checks for INNATE languages
 		if(!say_understands(speaker, language))
 			if(isanimal(speaker))
-				var/mob/living/simple_animal/S = speaker
+				var/mob/living/simple/S = speaker
 				if(S.speak.len)
 					message = pick(S.speak)
 			else
@@ -455,7 +455,7 @@ mob/proc/format_say_message(var/message = null)
 		if(!(language.flags&INNATE))
 			if(!say_understands(speaker, language))
 				if(isanimal(speaker))
-					var/mob/living/simple_animal/S = speaker
+					var/mob/living/simple/S = speaker
 					if(S.speak && S.speak.len)
 						message = pick(S.speak)
 					else
