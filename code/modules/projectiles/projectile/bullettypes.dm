@@ -872,11 +872,12 @@
 		create_reagents(10)
 		reagents.add_reagent(spray, 10)
 
-/obj/item/projectile/bullet/shotgun/beanbag/on_hit(atom/target, def_zone = null)
-	if(isliving(target))
-		var/mob/living/L = target
-		if(istype(L) && L.reagents && !testing)
-			reagents.trans_to_mob(L, 10, CHEM_TOUCH, copy = FALSE)
+/obj/item/projectile/bullet/shotgun/beanbag/pepperball/on_hit(atom/target, def_zone = null)
+	if (!testing)
+		if(isliving(target))
+			var/mob/living/L = target
+			if(istype(L) && L.reagents && !testing)
+				reagents.trans_to_mob(L, 10, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/shotgun/beanbag/soporific
 	name = "soporific coated beanbag"
