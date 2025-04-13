@@ -34073,7 +34073,6 @@
 	icon_state = "1-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/autodoc,
 /turf/simulated/floor/tiled/white,
 /area/nadezhda/medical/sleeper)
 "gOA" = (
@@ -69247,6 +69246,12 @@
 /obj/structure/flora/small/grassb5,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/crew_quarters/pool)
+"nJk" = (
+/obj/effect/floor_decal/industrial/warningwhite,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/autodoc,
+/turf/simulated/floor/tiled/white/violetcorener,
+/area/nadezhda/medical/reception)
 "nJl" = (
 /obj/structure/flora/small/lavarock1,
 /obj/structure/flora/small/grassb5,
@@ -78248,7 +78253,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/autodoc,
 /turf/simulated/floor/tiled/white,
 /area/nadezhda/medical/reception)
 "pvb" = (
@@ -180788,7 +180792,7 @@ gLz
 uUs
 gWf
 sPy
-gBS
+nJk
 hVQ
 hVQ
 guc
