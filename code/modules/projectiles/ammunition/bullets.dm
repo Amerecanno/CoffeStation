@@ -626,7 +626,7 @@
 	icon_state = "s-shell_l"
 	spent_icon = "s-shell_l-spent"
 	shell_color = "l"
-	projectile_type = /obj/item/projectile/bullet/pellet/shotgun
+	projectile_type = /obj/item/projectile/bullet/shotgun/birdshot
 	maxamount = 5
 
 /obj/item/ammo_casing/shotgun/pellet/prespawned
@@ -638,7 +638,7 @@
 	icon_state = "s-shell_ss"
 	spent_icon = "s-shell_ss-spent"
 	shell_color = "scrap_s"
-	projectile_type = /obj/item/projectile/bullet/pellet/shotgun/scrap
+	projectile_type = /obj/item/projectile/bullet/shotgun/birdshot/scrap
 
 /obj/item/ammo_casing/shotgun/pellet/scrap/prespawned
 	amount = 5
@@ -740,6 +740,17 @@
 /obj/item/ammo_casing/shotgun/biomatter/prespawned
 	amount = 5
 
+//Todo give this a cool animation
+/obj/item/ammo_casing/shotgun/relay
+	name = "GP relay shell"
+	desc = "A 20mm relay shot shell. \
+	A highly advanced AI controlled bullet, plated in advanced materials and chemicals that are unable to be salvaged. \
+	When shot into a living or robotic target the bullet will relay a second projectile to the next closest target, this will repeat on successful kills automatically."
+	icon_state = "relay-shell"
+	spent_icon = "relay-shell-spent"
+	shell_color = "i"
+	projectile_type = /obj/item/projectile/bullet/shotgun/relay
+	maxamount = 1
 
 //Can stun in one hit if aimed at the head, but
 //is blocked by clothing that stops tasers and is vulnerable to EMP

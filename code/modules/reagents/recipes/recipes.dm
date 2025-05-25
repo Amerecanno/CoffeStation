@@ -524,6 +524,7 @@
 	s.set_up(2, 1, location)
 	s.start()
 	for(var/mob/living/carbon/M in viewers(world.view, location))
+		M.update_equipment_vision()
 		switch(get_dist(M, location))
 			if(0 to 3)
 				if(M.eyecheck() <= FLASH_PROTECTION_MODERATE)
@@ -961,6 +962,13 @@
 	required_reagents = list("dermaline" = 1, "cronexidone" = 1, "sterilizine" = 1, "aminazine" = 1, "serotrotium" = 1, "polystem" = 1, "paroxetine" = 1,"rezadone" = 1,"spaceacillin" = 1,"rejuvenating_agent" = 1,"cordradaxon" = 1,"carthatoline" = 1,"dexalinp" = 1)
 	result_amount = 1
 	catalysts = list("honey" = 5)
+
+//Quite a useful chem so its a bit annoying to make, but you get a lot
+/datum/chemical_reaction/owylo
+	result = "owylo"
+	required_reagents = list("spaceacillin" = 2, "sanguinum" = 3,"inaprovaline" = 5, "carthatoline" = 2, "meralyne" = 0.5, "somnadine" = 0.5)
+	result_amount = 10
+	catalysts = list("suppressital" = 5)
 
 /datum/chemical_reaction/suppressital
 	result = "suppressital"

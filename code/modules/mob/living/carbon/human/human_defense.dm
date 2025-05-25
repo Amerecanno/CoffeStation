@@ -132,8 +132,19 @@ uniquic_armor_act
 					total += math_var
 					item_punishment = clamp(0, math_var, 8)
 
+/*			this dosnt work! recoil never goes back down for some reason
+			if(istype(I, /obj/item/gun))
+				var/obj/item/gun/G = I
+				if(G.recoil)
+					external_recoil(G.recoil.getRating(RECOIL_BASE) + 12) //small delay of it to line up with when you get hit
+			*/
+
 		if(stats.getStat(STAT_TGH) > 0)
-			total += clamp(0, round(stats.getStat(STAT_TGH)/(12 + item_punishment)), 10)
+			//Prevents a devide by 0
+			var/tgt = stats.getStat(STAT_TGH)
+			if(tgt == 0)
+				tgt = 1
+			total += clamp(0, round(tgt/(12 + item_punishment)), 10)
 
 	if(stats.getPerk(PERK_OVERBREATH))
 		var/health_deficiency = (maxHealth - health)

@@ -338,7 +338,7 @@
 
 		if (prob(miss_chance))
 			visible_message("\blue \The [O] misses [src] narrowly!")
-			playsound(src, "miss_sound", 50, 1, -6)
+			playsound(src, get_sfx("miss_sound"), 50, 1, -6)
 			return
 
 		if (O.is_hot() >= HEAT_MOBIGNITE_THRESHOLD)
@@ -440,6 +440,8 @@
 		on_fire = TRUE
 		set_light(light_range + 3, l_color = COLOR_RED)
 		update_fire()
+		add_overlay(image("icon"='icons/mob/OnFire.dmi', "icon_state"="Generic_mob_burning"))
+
 
 /mob/living/proc/ExtinguishMob()
 	if(on_fire)
@@ -447,6 +449,7 @@
 		fire_stacks = 0
 		set_light(max(0, light_range - 3))
 		update_fire()
+		cut_overlay(image("icon"='icons/mob/OnFire.dmi', "icon_state"="Generic_mob_burning"))
 
 /mob/living/proc/update_fire()
 	return

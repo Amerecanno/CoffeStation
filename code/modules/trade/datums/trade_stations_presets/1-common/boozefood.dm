@@ -19,7 +19,6 @@
 			/obj/item/reagent_containers/drinks/milk = good_data("milk carton", list(1, 2), 100),
 			/obj/item/storage/fancy/egg_box = good_data("egg box", list(1, 2), 300),
 			/obj/item/reagent_containers/snacks/tofu = good_data("tofu", list(1, 2), 20),
-			/obj/item/reagent_containers/snacks/meat = good_data("meat", list(1, 2), 25),
 			/obj/item/reagent_containers/condiment/enzyme,
 			/obj/item/reagent_containers/condiment/cookingoil = good_data("cooking oil bottle", list(1, 2), 200)
 		),
@@ -39,6 +38,7 @@
 			/obj/item/reagent_containers/drinks/bottle/grenadine,
 			/obj/item/reagent_containers/drinks/bottle/melonliquor,
 			/obj/item/reagent_containers/drinks/bottle/absinthe,
+			/obj/item/reagent_containers/drinks/bottle/cider,
 			/obj/item/reagent_containers/drinks/cans/thirteenloko
 		),
 		"Soft-Drinks" = list(
@@ -46,6 +46,7 @@
 			/obj/item/reagent_containers/drinks/bottle/tomatojuice,
 			/obj/item/reagent_containers/drinks/bottle/limejuice,
 			/obj/item/reagent_containers/drinks/bottle/pineapplejuice,
+			/obj/item/reagent_containers/drinks/bottle/applejuice,
 			/obj/item/reagent_containers/drinks/bottle/cream,
 			/obj/item/reagent_containers/drinks/bottle/cola,
 			/obj/item/reagent_containers/drinks/bottle/space_up,
