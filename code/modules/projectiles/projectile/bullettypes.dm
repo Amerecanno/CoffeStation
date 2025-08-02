@@ -989,8 +989,8 @@
 
 					var/obj/item/projectile/bullet/shotgun/relay/relayed = new type(enemy_turf)
 
-					if(health >= 1)
-						//message_admins("dont relay")
+					if(target_mob.health >= 1)
+						//message_admins("dont relay [M.health]")
 
 						relayed.allow_relay = FALSE
 
@@ -999,13 +999,13 @@
 					//message_admins("health 4     [target_mob.health]")
 					break
 
-			if(faction_shooter)
+			if(faction_shooter && !original_firer) //Way simpler verson for edge cases
 
 				if(M.faction != faction_shooter)
 
 					var/obj/item/projectile/bullet/shotgun/relay/relayed = new type(enemy_turf)
 
-					if(health >= 1)
+					if(target_mob.health >= 1)
 						//message_admins("dont relay")
 
 						relayed.allow_relay = FALSE
