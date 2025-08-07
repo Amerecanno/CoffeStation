@@ -123,11 +123,8 @@
 		var/obj/item/paper/P = W
 		var/dat
 		if(!(ishuman(usr) || isghost(usr) || issilicon(usr)))
-			dat+= "<HTML><meta charset=\"UTF-8\"><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[stars(P.info)][P.stamps]</BODY></HTML>"
 			dat = "[pages_header][stars(P.info)][P.stamps]"
 		else
-			dat+= "<HTML><meta charset=\"UTF-8\"><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>"
-		user << browse(dat, "window=[name]")
 			dat = "[pages_header][P.info][P.stamps]"
 		color = P.color
 		user << browse(HTML_SKELETON_PAPER(P.name,null,dat,P.color), "window=[name]")
