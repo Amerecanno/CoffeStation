@@ -41,6 +41,8 @@
 	// var/mentor_msg = "\blue <b><font color=red>Request for Help: </font>[get_options_bar(mob, 4, 1, 1, 0)]:</b> [msg]"
 
 	// Send adminhelp message to Discord chat
+
+	// Send adminhelp message to Discord chat
 	send2adminchat_webhook(key_name(src), original_msg)
 
 	// Assuming it is an an admin help and not a mentor help
@@ -49,7 +51,6 @@
 	// SSmentor_tickets.newHelpRequest(src, mentormsg) // Mhelp (for mentors if they ever get implemented)
 
 	return
-
 
 /proc/tgsadminwho()
 	var/list/message = list("Admins: ")

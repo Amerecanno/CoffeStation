@@ -23,9 +23,9 @@
 	perks = list(PERK_MARKET_PROF, /datum/perk/bartender)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/bartender //Re-using this.
-	description = "The Bartender runs the colony bar, providing colonists with drinks and entertainment.<br>\
-	Working with the Chef and Gardener, you make the big decisions. Run your business well - perhaps seek to maximise profits.<br>\
-	Although tips are a good source of income, your wider business acumen will truly decide your prosperity here."
+	description = "Бармен управляет баром колонии, предлагая колонистам напитки и развлечения.<br>\
+	Работая с шеф-поваром и садовником, вы принимаете важные решения. Ведите свой бизнес хорошо -  стремитесь максимизировать прибыль.<br>\
+	Хотя чаевые являются хорошим источником дохода, ваша деловая хватка в сфере разлива пьянящих зелий будет определять ваше процветание здесь."
 
 	duties = "Run the bar - provide a safe haven for food, drinks and entertainment.<br>\
 		Seek extra sources of income for the venue - perhaps run deals or trade secrets.<br>\
@@ -65,9 +65,9 @@
 	You will typically work closely with a Bartender while cooking, cleaning, serving and perhaps entertaining.<br>\
 	You are paid mainly through fulfilling requests for food. The successful Chef takes initiative by asking for customer orders."
 
-	duties = "Provide enough meals to feed the colony. Aim for a variety of interesting and tasty dishes.<br>\
-		Ensure your customers are well-fed and looked after.<br>\
-		Potentially take over bartending duties if a Bartender is not present."
+	duties = "Pобеспечьте достаточное количество еды, чтобы накормить колонию. Стремитесь к разнообразию интересных и вкусных блюд.<br>\
+		Убедитесь, что ваши клиенты хорошо накормлены и им понравилась еда.<br>\
+		Потенциально возьмите на себя ответственность за то что колонисты спились в отсутствие Бармена."
 
 
 /obj/landmark/join/start/clubworker
@@ -106,10 +106,10 @@
 	You are the go-to expert for flora destruction - use shovels and hatchets, or seek more advanced equipment like flamethrowers and chainsaws.<br>\
 	Remember that your goods come with a cost and more exotic crops can command a higher price."
 
-	duties = "Grow food. Ensure a good supply of raw vegetables and core grains - rice and wheat.<br>\
-		Raise animals for eggs, meat and recreation.<br>\
-		Maintain the potted plants around the colony.<br>\
-		Manage invasive flora around the colony and control fungal infestations."
+	duties = "Выращивайте пищу. Обеспечьте хороший запас сырых овощей и основных злаков - риса и пшеницы.<br>\
+		Разводите животных для получения яиц, мяса и эмоциональной разгрузки (другие расы не являются животными).<br>\
+		Поддерживайте растения в горшках вокруг колонии.<br>\
+		Управляйте агрессивной флорой вокруг колонии и контролируйте грибковые заражения."
 
 /obj/landmark/join/start/hydro
 	name = "Gardener"
@@ -152,9 +152,9 @@
 	The SOM pays you a terrible retaining fee, so use your wits to sustain yourself - perhaps ask your audience for donations.<br>\
 	In addition you do not gain desires like other members of the colony, instead you spend your insight at your workbench to create expensive works of art worth selling."
 
-	duties = "Provide (family-friendly) entertainment to the crew with your varied talents.<br>\
-		Create and sell valuable works of art in your artist bench.<br>\
-		Try to be a successful rather than starving artist. The costume vendor and equipment in your cramped studio may prove useful."
+	duties = "Обеспечьте (Безопасное для семейного просмотра) развлечение для экипажа с помощью ваших разнообразных талантов.<br>\
+		Создавайте и продавайте ценные произведения искусства в своей мастерской художника.<br>\
+		Постарайтесь быть успешным, а не голодающим художником. Продавец костюмов и оборудование в вашей тесной студии могут оказаться полезными."
 
 /obj/landmark/join/start/artist
 	name = "Artist"
@@ -188,10 +188,10 @@
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/camera_monitor)
-	description = "The lowly Janitor, well paid but rarely respected, nevertheless provides a valuable service.<br>\
-	You will trundle around the colony, armed with your trusty janicart full of cleaning supplies, disposing of trash and pests.<br>\
-	Some minor maintenance also falls within your duties. Fix lights, correct broken vendors, replace floor tiles - ease the guild burden.<br>\
-	Although your status is miserable, your knowledge of maintenance may lead you to some valuable salvage for some extra cash."
+	description = "Скромный Уборщик, которому хорошо платят, но редко уважают, тем не менее оказывает ценную услугу.<br>\
+	Вы будете передвигаться по колонии, вооружившись своей верной тележкой, полной чистящих средств, избавляясь от мусора и вредителей.<br>\
+	В ваши обязанности также входит незначительное техническое обслуживание. Почините светильники, исправьте сломанные торговые автоматы, замените напольную плитку - облегчите бремя гильдии.<br>\
+	Несмотря на то, что ваш статус плачевен, ваши знания в области технического обслуживания могут привести вас к некоторому ценному спасению вашего авторитета."
 
 	duties = "Clean blood, dirt, rubble and messes. Don't clean up crime scenes!<br>\
 		Conduct minor repairs and maintenance when guild adepts aren't available.<br>\

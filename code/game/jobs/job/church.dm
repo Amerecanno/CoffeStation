@@ -12,7 +12,7 @@
 	selection_color = "#ecd37d"
 	ideal_character_age = 40
 	minimum_character_age = 25
-	playtimerequired = 1200
+	playtimerequired = 600
 	also_known_languages = list(LANGUAGE_LATIN = 100)
 	security_clearance = CLEARANCE_CLERGY
 	health_modifier = 10
@@ -50,9 +50,10 @@
 	Additional duties may see you hosting sermons for the faithful, organizing charity events like giving out food or performing last rites for those forever lost.<br>\
 	The Crusader protocol may also be enacted under your command when facing a Hivemind threat. Use this boost, and your ritual book, to defeat evil."
 
-	duties = "Represent the interests of church disciples on the colony. Protect them from persecution and speak for them.<br>\
-		Hold mass, give sermons, preach to the faithful, and lead group ritual sessions.<br>\
-		Hold funerals for those who cannot be saved."
+	duties = "Представлять интересы учеников церкви в колонии. Защищайте их от преследований и говорите за них.<br>\
+	Проводите мессы, произносите проповеди, проповедуйте верующим и проводите групповые ритуальные сеансы.<br>\
+	Устраивайте похороны для тех, кого невозможно спасти."
+
 
 	setup_restricted = TRUE
 
@@ -98,9 +99,9 @@
 	The sacred duties of operating the bioreactor and managing biomass for the church machines are your main priority.<br>\
 	You should also work to represent the Faith in a positive light to all colonists. The prime may issue you further duties and orders."
 
-	duties = "Operate the bioreactor and manage biomass for the church machines.<br>\
-		Maintain areas owned by the church, keeping the facilities functional and in good order.<br>\
-		Offer assistance to the faithful and non-faithful alike."
+	duties = "Обслуживайте биореактор и управляйте биомассой для церковных машин.<br>\
+	Обслуживайте территории, принадлежащие церкви, поддерживая помещения в рабочем состоянии и в надлежащем порядке.<br>\
+	Предлагайте помощь как верующим, так и неверующим."
 
 	setup_restricted = TRUE
 

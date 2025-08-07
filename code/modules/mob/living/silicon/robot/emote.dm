@@ -271,3 +271,4 @@
 		QDEL_IN(emote_bubble, 3 SECONDS)
 
 	return
+

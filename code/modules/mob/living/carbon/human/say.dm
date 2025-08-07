@@ -50,7 +50,7 @@
 	var/alt_name = ""
 	if(name != rank_prefix_name(GetVoice()))
 		alt_name = "(as [rank_prefix_name(get_id_name())])"
-	var/last_symbol = copytext(message, length(message))
+	var/last_symbol = copytext_char(message, length(message))
 	if(last_symbol=="@")
 		if(!src.stats.getPerk(PERK_CODESPEAK))
 			to_chat(src, "You don't know the codes, pal.")
@@ -178,18 +178,18 @@
 */
 
 /mob/living/carbon/human/say_quote(var/message, var/datum/language/speaking = null)
-	var/verb = "says"
+	var/verb = "говорит" //WAS var/verb = "says"
 	var/ending = copytext(message, length(message))
 
 	if(speaking)
 		verb = speaking.get_spoken_verb(ending)
 	else
 		if(ending == "!")
-			verb=pick("exclaims", "shouts", "yells", "proclaims", "hollers")
+			verb=pick("восклицает", "кричит")
 		else if(ending == "?")
-			verb=pick("asks", "inquires", "enquires", "queries")
+			verb="спрашивает"
 		else if(ending=="@")
-			verb="reports"
+			verb="докладывает"
 
 	return verb
 

@@ -551,7 +551,7 @@ ADMIN_VERB_ADD(/datum/admins/proc/access_news_network, R_ADMIN, FALSE)
 	if(!check_rights(0))
 		return
 
-	var/dat = "<center><B>Game Panel</B></center><hr>"
+	var/dat = "<html><center><B>Game Panel</B></center><hr>"
 	if(get_storyteller() && (SSticker.current_state != GAME_STATE_PREGAME))
 		dat += "<A href='?src=\ref[get_storyteller()]'>Storyteller Panel</A><br>"
 	else
@@ -566,7 +566,7 @@ ADMIN_VERB_ADD(/datum/admins/proc/access_news_network, R_ADMIN, FALSE)
 		<br><A href='?src=\ref[src];vsc=airflow'>Edit Airflow Settings</A><br>
 		<A href='?src=\ref[src];vsc=plasma'>Edit Plasma Settings</A><br>
 		<A href='?src=\ref[src];vsc=default'>Choose a default ZAS setting</A><br>
-		"}
+		</html>"}
 
 	usr << browse(HTML_SKELETON(dat), "window=admin2;size=210x280")
 	return

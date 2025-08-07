@@ -22,7 +22,7 @@
 
 	ideal_character_age = 40
 	minimum_character_age = 25
-	playtimerequired = 1200
+	playtimerequired = 600
 	health_modifier = 5
 
 	stat_modifiers = list(
@@ -38,10 +38,10 @@ The vendors found throughout the colony are also operated by your organization. 
 There is a market for contraband and more unscrupulous services. Venturing into this area may prove profitable, but not without a risk.<br>\
 You do not receive a salary, but can fund yourself from the company account. Strike a balance between the needs of yourself and the wider company."
 
-	duties = "Keep the crew supplied with anything they might need - for a healthy profit.<br>\
-Buy up valuable items from scavengers and make a profit reselling them.<br>\
-Deploy your mining staff to harvest matter and materials.<br>\
-Counsel the council on directing the colony towards profitable opportunities."
+	duties = "Обеспечьте экипаж всем, что им может понадобиться, - для получения солидной прибыли.<br>\
+	Скупайте ценные предметы у мусорщиков и получайте прибыль, перепродавая их.<br>\
+	Направьте своих шахтеров для сбора материала.<br>\
+	Консультируйте совет по направлению колонии к прибыльным перспективам."
 
 	software_on_spawn = list(///datum/computer_file/program/supply,
 							 ///datum/computer_file/program/deck_management,
@@ -104,9 +104,9 @@ In quieter times use your initiative. Visit departments to ask if there's anythi
 Busted lights? Broken vendors? Offer your services for a small fee. You may also find profit in the maintenance tunnels.<br>\
 Avoid the deeper tunnels unless otherwise instructed, however - this domain is hazardous and for trained mining specialists."
 
-	duties = "Staff the front desk and be ready to process payments and orders.<br>\
-	Deliver goods to departments and individuals in good time.<br>\
-	Always seek other forms of profit, but do so while keeping the company in a good light."
+	duties = "Сотрудники стойки регистрации должны быть готовы обрабатывать платежи и заказы.<br>\
+	Своевременно доставляйте товары отделам и частным лицам.<br>\
+	Всегда ищите другие формы получения прибыли, но делайте это, сохраняя компанию в хорошем свете."
 
 /obj/landmark/join/start/cargo_tech
 	name = "Cargo Technician"

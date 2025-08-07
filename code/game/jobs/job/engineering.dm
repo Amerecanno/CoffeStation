@@ -11,7 +11,7 @@
 	difficulty = "Medium."
 	selection_color = "#c7b97b"
 	req_admin_notify = 1
-	playtimerequired = 1200
+	playtimerequired = 600
 	wage = WAGE_COMMAND
 	ideal_character_age = 50
 	minimum_character_age = 25
@@ -51,9 +51,9 @@
 	Machinery across the colony is your responsibility. Let no outsiders interfere or intrude into your domain - even Command staff are no exception.<br>\
 	Treat every Guild member like your family. Keep them paid, fed and safe. You may be a part of the wider colony, but your own come first."
 
-	duties = "Manage the Guild Adepts - set tasks and areas of focus.<br>\
-	Strive to protect the rights of your Adepts, as well as their safety and health.<br>\
-	Conduct your own repairs and projects as required - especially when low staffed. "
+	duties = "Управляйте адептами Гильдии - устанавливайте задачи и области сосредоточения.<br>\
+	Стремитесь защитить права своих Адептов, а также их безопасность и здоровье.<br>\
+	Проводите свои собственные ремонтные работы и проекты по мере необходимости - особенно при нехватке персонала. "
 
 	perks = list(PERK_INSPIRATION, PERK_HANDYMAN)
 
@@ -107,10 +107,10 @@ Outside of this, you should devote time to learning and configuring various syst
 This upgrade culture extends to your own arsenal - mod and upgrade your tools with parts from maintenance, purchased from Lonestar or the Prospectors.<br>\
 Do not let outsiders, even Command Staff, interfere with the duties of the Guild. And remember - be ready to respond to emergency calls at any time."
 
-	duties = "Start up the solars and generators.<br>\
-	Repair anything and anyone that needs some maintenance.<br>\
-	Respond to distress calls and patch breaches in the walls.<br>\
-	Keep every part of the colony powered, oxygenated, and ready to use."
+	duties = "Запустите солнечную батарею и генераторы.<br>\
+	Ремонтируйте все и вся, что нуждается в некотором обслуживании.<br>\
+	Отвечайте на сигналы бедствия и латайте бреши в стенах.<br>\
+	Поддерживайте питание каждой части колонии, насыщайте ее кислородом и сделайте все чтобы с технической точки зрения колония была работоспособна."
 
 	perks = list(PERK_INSPIRATION, PERK_HANDYMAN)
 

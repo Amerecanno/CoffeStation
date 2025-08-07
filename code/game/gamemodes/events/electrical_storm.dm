@@ -23,8 +23,7 @@ Just not fun
 
 
 /datum/event/electrical_storm/announce()
-	command_announcement.Announce("An electrical storm has been detected in your area, please repair potential electronic overloads.", "Electrical Storm Alert")
-
+	command_announcement.Announce("В вашем районе была обнаружена электрическая буря, пожалуйста, устраните возможные электронные перегрузки.", "Оповещение об электро-шторме")
 
 /datum/event/electrical_storm/start()
 	switch(severity)
@@ -37,7 +36,7 @@ Just not fun
 
 /proc/lightsout(isEvent = 0, lightsoutAmount = 1,lightsoutRange = 24) //leave lightsoutAmount as 0 to break ALL lights
 	if(!isEvent)
-		command_announcement.Announce("An Electrical storm has been detected in your area, please repair potential electronic overloads.","Electrical Storm Alert")
+		command_announcement.Announce("В вашем районе была обнаружена электрическая буря, пожалуйста, устраните возможные электронные перегрузки.", "Оповещение об электро-шторме")
 
 	if(lightsoutAmount)
 		var/list/apcs = list()

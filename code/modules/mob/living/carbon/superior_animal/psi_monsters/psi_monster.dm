@@ -215,8 +215,8 @@
 	icon_state = "ash"
 	anchored = TRUE
 	var/catalyst_drop = /obj/random/psi_catalyst
-	var/psion_chance = 25
-	var/normie_chance = 10
+	var/psion_chance = 30//Coffee edit: 25->30
+	var/normie_chance = 15//10->15
 
 /obj/effect/decal/cleanable/psi_ash/attack_hand(mob/user as mob)
 	if(user.stats.getPerk(PERK_PSION) && prob(psion_chance))
@@ -237,6 +237,12 @@
 	catalyst_drop = /obj/random/psi_catalyst/flesh_behemoth
 	psion_chance = 45
 	normie_chance = 20
+
+/obj/effect/decal/cleanable/psi_ash/debuffer
+	name = "strange ashes of a shallow breather"
+	catalyst_drop = /obj/random/psi_catalyst/debuffer
+	psion_chance = 75
+	normie_chance = 50
 
 /obj/effect/decal/cleanable/psi_ash/king
 	name = "ashes of the throne bound tyrant"

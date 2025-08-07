@@ -181,7 +181,6 @@
 	name_plural = "Mar'quas"
 	default_form = FORM_MARQUA
 	obligate_form = TRUE
-	reagent_tag = IS_MARQUA
 	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/stomp,  /datum/unarmed_attack/kick)
 	darksight = 4
 	num_alternate_languages = 2
@@ -233,9 +232,6 @@
 
 /datum/species/marqua/get_bodytype()
 	return "Mar'Qua"
-
-
-
 
 /datum/species/kriosan
 	name = "Kriosan"

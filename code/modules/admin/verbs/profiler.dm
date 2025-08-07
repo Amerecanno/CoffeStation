@@ -48,4 +48,6 @@ ADMIN_VERB_ADD(/client/proc/profiler_data, R_ADMIN, FALSE)
 		link += "</tr>"
 	link += "</table>"
 
+	src << browse(link, "window=serverprofile")
+
 	src << browse(HTML_SKELETON(link), "window=serverprofile")
