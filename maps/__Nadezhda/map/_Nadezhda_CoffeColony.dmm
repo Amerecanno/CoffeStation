@@ -5501,9 +5501,6 @@
 /area/nadezhda/command/crematorium)
 "bgl" = (
 /obj/random/junk/cigbutt,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
@@ -9436,9 +9433,8 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/engine_room)
@@ -19613,7 +19609,6 @@
 /area/nadezhda/outside/pond)
 "dXr" = (
 /obj/structure/table/rack/shelf,
-/obj/item/storage/part_replacer/mini,
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/workshop)
 "dXw" = (
@@ -20589,16 +20584,18 @@
 /area/nadezhda/maintenance/undergroundfloor2east)
 "egE" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/inflatable_dispenser{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/inflatable_dispenser,
-/obj/item/inflatable_dispenser{
-	pixel_x = -2;
-	pixel_y = -2
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/storage/part_replacer/mini,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
+/obj/random/techpart/low_chance,
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/workshop)
 "egG" = (
@@ -24267,6 +24264,7 @@
 	dir = 1
 	},
 /obj/item/soap,
+/obj/item/mop,
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/workshop)
 "eQT" = (
@@ -24978,6 +24976,8 @@
 /area/turret_protected/ai)
 "eYD" = (
 /obj/structure/closet/crate,
+/obj/item/am_shielding_container,
+/obj/item/am_shielding_container,
 /obj/item/am_shielding_container,
 /obj/item/am_shielding_container,
 /obj/item/am_shielding_container,
@@ -28592,20 +28592,6 @@
 	layer = 1
 	},
 /area/nadezhda/crew_quarters/arcade)
-"fJX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/steel/techfloor,
-/area/nadezhda/engineering/engine_room)
 "fJY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37318,6 +37304,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel/gray_perforated,
 /area/turret_protected/ai_upload)
+"hym" = (
+/obj/machinery/chemical_dispenser/industrial,
+/turf/simulated/floor/tiled/steel/techfloor,
+/area/nadezhda/engineering/workshop)
 "hyn" = (
 /obj/machinery/door/airlock/maintenance_common,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37691,8 +37681,6 @@
 "hBc" = (
 /obj/structure/table/reinforced,
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -41068,8 +41056,6 @@
 "igV" = (
 /obj/structure/table/reinforced,
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -53885,6 +53871,7 @@
 "kGt" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/random/junk/cigbutt,
+/obj/structure/railing,
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
 "kGv" = (
@@ -57328,9 +57315,6 @@
 /obj/random/medical/low_chance,
 /obj/random/lowkeyrandom/low_chance,
 /obj/random/lowkeyrandom/low_chance,
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint_panels,
 /area/nadezhda/maintenance/undergroundfloor1east)
@@ -57678,12 +57662,7 @@
 /area/nadezhda/medical/sleeper)
 "lvT" = (
 /obj/effect/floor_decal/industrial/box/red,
-/obj/machinery/disposal/deliveryChute{
-	dir = 8
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
+/obj/machinery/recycler,
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/engineering/engine_waste)
 "lvU" = (
@@ -57869,9 +57848,6 @@
 	pixel_y = -32
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/engine_room)
 "lyz" = (
@@ -58568,10 +58544,6 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/engine_room)
 "lGe" = (
@@ -60497,6 +60469,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel/danger,
 /area/nadezhda/engineering/workshop)
 "mai" = (
@@ -66250,8 +66223,9 @@
 	},
 /obj/item/trash/pistachios,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/railing{
+	dir = 1;
+	tag = "icon-railing0 (NORTH)"
 	},
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
@@ -67685,8 +67659,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/railing{
+	dir = 1;
+	tag = "icon-railing0 (NORTH)"
 	},
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
@@ -79913,8 +79888,9 @@
 	},
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/railing{
+	dir = 1;
+	tag = "icon-railing0 (NORTH)"
 	},
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
@@ -84846,6 +84822,15 @@
 	},
 /obj/item/storage/briefcase/inflatable,
 /obj/structure/table/steel_reinforced,
+/obj/item/inflatable_dispenser{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/inflatable_dispenser,
+/obj/item/inflatable_dispenser{
+	pixel_x = 2;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/workshop)
 "qJx" = (
@@ -88300,11 +88285,7 @@
 	})
 "rvK" = (
 /obj/effect/floor_decal/industrial/danger,
-/obj/structure/window/reinforced,
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
+/obj/structure/railing,
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
 "rvM" = (
@@ -89161,9 +89142,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	dir = 2
-	},
 /turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/engine_room)
 "rDM" = (
@@ -90571,10 +90549,15 @@
 /turf/simulated/floor/tiled/white,
 /area/nadezhda/medical/sleeper)
 "rTx" = (
-/obj/effect/window_lwall_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing{
+	dir = 1;
+	tag = "icon-railing0 (NORTH)"
+	},
+/turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
 "rTz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -92313,19 +92296,6 @@
 	},
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/command/hallway)
-"slb" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating/under,
-/area/nadezhda/engineering/engine_waste)
 "sle" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white/brown_platform,
@@ -92997,8 +92967,6 @@
 /area/nadezhda/security/sechall)
 "srU" = (
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -94651,8 +94619,6 @@
 "sIQ" = (
 /obj/structure/table/reinforced,
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -100017,20 +99983,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel/bluecorner,
 /area/nadezhda/security/armory_blackshield)
-"tLc" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 2
-	},
-/turf/simulated/floor/tiled/steel/techfloor,
-/area/nadezhda/engineering/engine_room)
 "tLe" = (
 /obj/structure/flora/small/bushc1,
 /turf/simulated/floor/asteroid/grass,
@@ -100263,8 +100215,6 @@
 "tNm" = (
 /obj/structure/table/reinforced,
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -103436,9 +103386,12 @@
 /turf/simulated/floor/beach/water/flooded,
 /area/nadezhda/maintenance/undergroundfloor1east)
 "uqo" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/steel/danger,
-/area/nadezhda/engineering/workshop)
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/nadezhda/maintenance/undergroundfloor1east)
 "uqp" = (
 /obj/random/flora/small_jungle_tree,
 /obj/structure/flora/small/bushb2,
@@ -105390,16 +105343,8 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/nadezhda/crew_quarters/bar)
 "uLs" = (
-/obj/effect/window_lwall_spawn/plasma/reinforced,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "guild_workshop";
-	name = "Workshop Shutters";
-	opacity = 0
-	},
-/turf/simulated/floor/plating,
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/steel/techfloor,
 /area/nadezhda/engineering/workshop)
 "uLt" = (
 /obj/effect/window_lwall_spawn/smartspawn,
@@ -106942,8 +106887,6 @@
 /area/nadezhda/crew_quarters/hydroponics/garden)
 "uZd" = (
 /obj/random/rig_module/low_chance,
-/obj/random/techpart/low_chance,
-/obj/random/techpart/low_chance,
 /obj/random/science/low_chance,
 /obj/random/tool/low_chance,
 /obj/random/tool/low_chance,
@@ -106984,13 +106927,6 @@
 	},
 /turf/simulated/floor/tiled/steel/gray_platform,
 /area/nadezhda/security/prisoncells)
-"uZB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/tagger{
-	sort_tag = "Cargo - Export"
-	},
-/turf/simulated/floor/tiled/dark/gray_perforated,
-/area/nadezhda/engineering/engine_waste)
 "uZD" = (
 /obj/structure/catwalk,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -119604,10 +119540,6 @@
 /area/nadezhda/hallway/surface/section1)
 "xzP" = (
 /obj/effect/floor_decal/industrial/danger,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/engineering/engine_waste)
 "xzZ" = (
@@ -154375,7 +154307,7 @@ uDQ
 chI
 eMP
 kOh
-iBY
+uqo
 oeb
 mcl
 cZb
@@ -154981,7 +154913,7 @@ sFf
 diQ
 qdJ
 kOh
-pYX
+iBY
 oeb
 mcl
 mcl
@@ -177326,9 +177258,9 @@ xKi
 evd
 nxD
 xKi
-twX
-twX
-twX
+cZb
+cZb
+cZb
 xKi
 evd
 vqV
@@ -177528,9 +177460,9 @@ xKi
 evd
 evd
 xKi
-twX
-twX
-twX
+cZb
+cZb
+cZb
 xKi
 vtn
 gmk
@@ -177730,9 +177662,9 @@ bcp
 evd
 evd
 xKi
-twX
-twX
-twX
+cZb
+cZb
+cZb
 xKi
 evd
 vqV
@@ -177932,9 +177864,9 @@ atV
 evd
 evd
 xKi
-twX
-twX
-twX
+cZb
+cZb
+cZb
 xKi
 jvO
 evd
@@ -178134,9 +178066,9 @@ atV
 cBF
 xKi
 xKi
-twX
-twX
-twX
+cZb
+cZb
+cZb
 xKi
 evd
 evd
@@ -178335,10 +178267,10 @@ jxX
 jxX
 cJD
 xKi
-twX
-twX
-twX
-twX
+cZb
+cZb
+cZb
+cZb
 xKi
 evd
 nxD
@@ -191914,9 +191846,9 @@ htA
 nQa
 vDn
 kor
-uLs
+hym
 mah
-uqo
+orP
 cWS
 uRz
 uUx
@@ -192152,7 +192084,7 @@ dIo
 hgO
 kGt
 lXx
-hyM
+rTx
 dXR
 tip
 cZb
@@ -192954,10 +192886,10 @@ hLP
 iHG
 jdr
 gOA
-fJX
-rTx
-slb
-uZB
+ecn
+sOw
+sVn
+hgO
 rvK
 aJf
 nuH
@@ -193356,7 +193288,7 @@ dOp
 nbC
 kjH
 bVF
-tLc
+oLI
 rDK
 lFQ
 tip
