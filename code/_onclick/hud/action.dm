@@ -204,7 +204,7 @@
 	var/mob/viewer = our_hud.mymob
 	if(viewer.client)
 		viewer.client.screen |= src
-
+/*
 /obj/screen/action_palette/MouseEntered(location, control, params)
 	. = ..()
 	if(QDELETED(src))
@@ -220,7 +220,7 @@
 
 /obj/screen/action_palette/proc/show_tooltip(params)
 	openToolTip(usr, src, params, title = name, content = desc)
-
+*/
 /obj/screen/action_palette/Click(location, control, params)
 	var/list/modifiers = params2list(params)
 
