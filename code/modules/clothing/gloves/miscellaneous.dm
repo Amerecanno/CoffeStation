@@ -105,20 +105,19 @@
 	price_tag = 350
 	siemens_coefficient = 0
 
-
-/obj/item/clothing/gloves/thick/ablasive
+/obj/item/clothing/gloves/thick/ablative
 	name = "ablative gloves"
 	desc = "A thick pair of gloves that excel at protecting the wearer against energy projectiles."
-	armor_list = list(melee = 2, bullet = 2, energy = 17, bomb = 30, bio = 10, rad = 0)
+	armor_list = list(melee = 3, bullet = 3, energy = 15, bomb = 10, bio = 10, rad = 0)
 	icon_state = "ihscombat"
 	item_state = "ihscombat"
 	price_tag = 150
 	matter = list(MATERIAL_STEEL = 5, MATERIAL_PLASTIC = 10, MATERIAL_PLATINUM = 2)
 
-/obj/item/clothing/gloves/thick/ablasive/militia
+/obj/item/clothing/gloves/thick/ablative/militia
 	name = "militia ablative gloves"
 	desc = "A thick pair of gloves that excel at protecting the wearer against energy projectiles."
-	armor_list = list(melee = 2, bullet = 2, energy = 3, bomb = 10, bio = 0, rad = 0)
+	armor_list = list(melee = 3, bullet = 3, energy = 15, bomb = 10, bio = 10, rad = 0)
 	icon_state = "bs_ablative"
 	item_state = "ihscombat"
 
