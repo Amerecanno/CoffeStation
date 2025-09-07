@@ -35,6 +35,8 @@
 			H.visible_message("<B>[H]</B> клан[ya]етс[ya] <B>[P]</B>.")
 			if (istype(P.loc, /obj/structure/closet) && P.loc == H.loc)
 				P.visible_message("<B>[H]</B> клан[ya]етс[ya] <B>[P]</B>.")
+			playsound(loc, 'coffecode/sound/interactions/respect.ogg', 50, 1, -1)
+
 
 		else if (href_list["interactionsss"] == "pet")
 			if(((!istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && hashands && H.Adjacent(P))
