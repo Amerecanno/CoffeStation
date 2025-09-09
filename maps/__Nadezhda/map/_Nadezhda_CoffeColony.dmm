@@ -21261,6 +21261,12 @@
 	},
 /turf/simulated/floor/tiled/steel/brown_platform,
 /area/nadezhda/pros/foreman)
+"enz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/landmark/join/start/fence,
+/turf/simulated/floor/tiled/dark,
+/area/nadezhda/pros/prep)
 "enD" = (
 /obj/effect/window_lwall_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -61509,6 +61515,12 @@
 /obj/random/flora/small_jungle_tree,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest)
+"miw" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
+/obj/landmark/join/start/fence,
+/turf/simulated/floor/plating/under,
+/area/nadezhda/outside/inside_colony)
 "miE" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -116787,12 +116799,12 @@
 /turf/simulated/floor/asteroid/dirt/dust,
 /area/nadezhda/outside/scave)
 "wSC" = (
-/obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warningwhite/full,
 /obj/structure/sign/warning/smoking/small{
 	pixel_x = 32;
 	pixel_y = -32
 	},
+/obj/structure/closet/secure_closet/reinforced/foreman/fence,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/pros/prep)
 "wSD" = (
@@ -225754,7 +225766,7 @@ kau
 vfw
 bBn
 nqR
-aJa
+miw
 aJa
 aJa
 paF
@@ -225950,7 +225962,7 @@ lBK
 kgr
 unw
 kUX
-kUX
+enz
 xdH
 pQw
 hpt
