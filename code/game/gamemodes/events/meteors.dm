@@ -40,13 +40,13 @@ disabled
 	start_side = pick(cardinal)
 	endWhen = startWhen + duration
 
-/datum/event/meteor_wave/announce()
-	switch(severity)
-		if(EVENT_LEVEL_MAJOR)
-			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+// /datum/event/meteor_wave/announce()
+// 	switch(severity)
+// 		if(EVENT_LEVEL_MAJOR)
+// 			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 
-		else
-			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+// 		else
+// 			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 
 /datum/event/meteor_wave/tick()
 	if(activeFor >= next_meteor)

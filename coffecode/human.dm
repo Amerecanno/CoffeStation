@@ -1,7 +1,9 @@
+// /mob/living/carbon/human
+//     var/last_interaction_time = 0  // когда был последний интеракт
+//     var/interaction_cooldown = 20  // кулдаун в тиках (1 сек = 10 тиков)
+
+
 /mob/living/carbon/human/Topic(href, href_list)
-
-
-
 	///////Interactions!!///////
 	if(href_list["interactionsss"])
 		if (usr.stat == DEAD || usr.stat == UNCONSCIOUS || usr.restrained())
@@ -10,6 +12,7 @@
 		//CONDITIONS
 		var/mob/living/carbon/human/H = usr
 		var/mob/living/carbon/human/P = H.partner
+
 		if (!(P in view(H.loc)))
 			return
 		var/obj/item/organ/external/temp = H.organs_by_name["r_arm"]
@@ -25,11 +28,12 @@
 		var/mouthfree = !((H.head && (H.check_mouth_coverage())) || (H.wear_mask && (H.check_mouth_coverage())))
 		var/mouthfree_p = !((P.head && (P.check_mouth_coverage())) || (P.wear_mask && (P.check_mouth_coverage())))
 		var/ya = "я"
-		// Убрано пока я не научусь кодить!
-		// if(world.time <= H.get_unarmed_damage + 1 SECONDS)
+
+		// if(world.time < H.last_interaction_time + H.interaction_cooldown)
+		// 	usr << "<span class='warning'>Подожди немного перед следующим действием!</span>"
 		// 	return
-		// else
-		// 	H.get_unarmed_damage = world.time
+
+
 
 		if (href_list["interactionsss"] == "bow")
 			H.visible_message("<B>[H]</B> клан[ya]етс[ya] <B>[P]</B>.")
@@ -173,5 +177,5 @@
 				H.visible_message("<span class='danger'>[H] показывает [P] [ya]зык!</span>")
 				if (istype(P.loc, /obj/structure/closet) && H.loc == P.loc)
 					P.visible_message("<span class='danger'>[H] показывает [P] [ya]зык!</span>")
-
+		// last_click_time = world.time
 	..()
