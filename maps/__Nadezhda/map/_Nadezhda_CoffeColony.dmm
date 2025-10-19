@@ -5411,7 +5411,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "bfx" = (
 /obj/item/trash/cigbutt/fortress,
 /turf/simulated/floor/rock/manmade/road,
@@ -9247,12 +9247,12 @@
 /turf/simulated/mineral,
 /area/nadezhda/maintenance/undergroundfloor1east)
 "bUx" = (
-/obj/machinery/mech_recharger,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/mech_recharger,
 /turf/simulated/floor/plating,
 /area/nadezhda/pros/shuttle)
 "bUG" = (
@@ -10115,7 +10115,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "cdD" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
@@ -13201,10 +13201,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/violetcorener,
 /area/nadezhda/rnd/research)
-"cKc" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
 "cKf" = (
 /obj/structure/flora/big/bush3,
 /obj/structure/flora/small/bushc2,
@@ -20544,7 +20540,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "efV" = (
 /obj/structure/sink{
 	dir = 8;
@@ -22770,7 +22766,7 @@
 "eCl" = (
 /obj/structure/invislight,
 /turf/simulated/wall/r_wall,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "eCs" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 8
@@ -23088,7 +23084,7 @@
 "eFx" = (
 /obj/effect/decal/cleanable/rubble,
 /turf/simulated/wall/r_wall,
-/area/asteroid/cave)
+/area/nadezhda/pros/shuttle)
 "eFz" = (
 /turf/simulated/shuttle/wall/mining{
 	icon_state = "15,6";
@@ -23715,6 +23711,9 @@
 /area/nadezhda/rnd/rbreakroom)
 "eMC" = (
 /obj/structure/window/reinforced,
+/obj/machinery/camera/network/colony_underground{
+	dir = 8
+	},
 /turf/simulated/floor/beach/water/shallow,
 /area/nadezhda/crew_quarters/hydroponics)
 "eMD" = (
@@ -40528,6 +40527,14 @@
 	},
 /turf/simulated/floor/tiled/cafe,
 /area/nadezhda/crew_quarters/kitchen)
+"ibh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/network/colony_underground{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel/cyancorner,
+/area/nadezhda/hallway/side/f2section1)
 "ibk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -50862,7 +50869,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/bluecorner,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "kch" = (
 /obj/machinery/light{
 	dir = 8
@@ -59109,7 +59116,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "lKx" = (
 /turf/simulated/open,
 /area/nadezhda/outside/scave)
@@ -63238,7 +63245,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/bluecorner,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "mBk" = (
 /obj/structure/railing{
 	dir = 4
@@ -67213,9 +67220,6 @@
 	name = "Residential District Maintenance"
 	})
 "noS" = (
-/obj/structure/multiz/stairs/enter/bottom{
-	dir = 1
-	},
 /obj/structure/railing{
 	dir = 4
 	},
@@ -67224,7 +67228,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/under,
+/obj/structure/multiz/stairs/enter/bottom{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/nadezhda/outside/inside_colony)
 "noT" = (
 /obj/random/material/low_chance,
@@ -76757,6 +76764,9 @@
 /obj/random/techpart,
 /obj/random/tool/advanced/low_chance,
 /obj/structure/table/standard,
+/obj/machinery/camera/network/engineering{
+	dir = 4
+	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/engineering/workshop)
 "pen" = (
@@ -89906,7 +89916,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "rKb" = (
 /obj/machinery/door/airlock/glass_security{
 	id_tag = "BrigFoyer";
@@ -90644,7 +90654,7 @@
 /area/nadezhda/maintenance/undergroundfloor1west)
 "rRv" = (
 /turf/simulated/floor/reinforced,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "rRB" = (
 /obj/random/cluster/roaches/lower_chance,
 /turf/simulated/floor/industrial/green_large_slates,
@@ -93577,7 +93587,7 @@
 /obj/structure/catwalk,
 /obj/machinery/light,
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "svK" = (
 /obj/structure/flora/big/rocks3,
 /turf/simulated/floor/asteroid/grass,
@@ -95296,9 +95306,6 @@
 /area/nadezhda/crew_quarters/techshop)
 "sMU" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/obj/machinery/camera/network/colony_underground{
-	dir = 8
-	},
 /obj/machinery/power/wall_obelisk{
 	pixel_x = 33;
 	pixel_y = -11;
@@ -98604,7 +98611,7 @@
 	light_color = "#0892d0"
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "tvy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -105696,7 +105703,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "uLS" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -112376,7 +112383,7 @@
 /obj/structure/catwalk,
 /obj/machinery/camera/network/security,
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "vZw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -112624,7 +112631,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/under,
-/area/nadezhda/security/sechall)
+/area/nadezhda/pros/shuttle)
 "wbu" = (
 /obj/structure/table/reinforced,
 /obj/machinery/centrifuge{
@@ -122720,6 +122727,9 @@
 	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/network/engineering{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/nadezhda/maintenance/substation/servist)
 "yaU" = (
@@ -190415,7 +190425,7 @@ qwB
 whU
 whU
 dIM
-bbM
+ibh
 rkA
 wKT
 bbM
@@ -210585,30 +210595,30 @@ gBD
 rDo
 rDo
 gBD
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
 eFx
 eFx
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
-wTF
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
 iYY
 iYY
 iYY
@@ -210787,30 +210797,30 @@ rDo
 vtI
 oLR
 uyF
-uSy
-cKc
+pHb
+xtc
 cdB
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
 cdB
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
 cdB
-cKc
-cKc
-uSy
+xtc
+xtc
+pHb
 iYY
 iYY
 iYY
@@ -210989,8 +210999,8 @@ vtI
 giu
 giu
 uyF
-uSy
-cKc
+pHb
+xtc
 rJX
 rRv
 rRv
@@ -211011,8 +211021,8 @@ rRv
 rRv
 rRv
 rJX
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -211191,8 +211201,8 @@ giu
 giu
 krV
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -211213,8 +211223,8 @@ kQa
 ucK
 eeG
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -211393,8 +211403,8 @@ vsC
 vsC
 vsC
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -211415,8 +211425,8 @@ irR
 uGN
 wpA
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -211595,8 +211605,8 @@ utf
 utf
 utf
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -211618,7 +211628,7 @@ qzk
 bbn
 rRv
 lKk
-uSy
+pHb
 cvt
 iYY
 iYY
@@ -211797,8 +211807,8 @@ utf
 utf
 utf
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -211819,8 +211829,8 @@ nth
 iRl
 cRK
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -211999,8 +212009,8 @@ gyi
 gyi
 gyi
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -212021,8 +212031,8 @@ sac
 iXB
 lGx
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -212201,8 +212211,8 @@ giu
 giu
 krV
 uyF
-uSy
-cKc
+pHb
+xtc
 rRv
 lHC
 xAk
@@ -212223,8 +212233,8 @@ xfI
 iJH
 iQU
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -212403,7 +212413,7 @@ giu
 giu
 giu
 uyF
-uSy
+pHb
 vZg
 lKS
 nwZ
@@ -212425,8 +212435,8 @@ ngN
 mEk
 rvT
 cMW
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -212605,7 +212615,7 @@ giu
 krV
 giu
 uyF
-uSy
+pHb
 tvw
 rIb
 tdf
@@ -212628,7 +212638,7 @@ opJ
 sJS
 rRv
 svJ
-uSy
+pHb
 cvt
 iYY
 iYY
@@ -212807,7 +212817,7 @@ giu
 giu
 vJI
 uyF
-uSy
+pHb
 tvw
 wjX
 tdf
@@ -212830,7 +212840,7 @@ pQN
 nxp
 rRv
 svJ
-uSy
+pHb
 cvt
 iYY
 iYY
@@ -213009,8 +213019,8 @@ giu
 vtI
 vtI
 uyF
-uSy
-cKc
+pHb
+xtc
 rhe
 eDa
 rjK
@@ -213031,8 +213041,8 @@ pHm
 wpM
 dxi
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
 iYY
 iYY
@@ -213211,8 +213221,8 @@ vtI
 rDo
 rDo
 gBD
-uSy
-cKc
+pHb
+xtc
 rRv
 llT
 eDt
@@ -213233,10 +213243,10 @@ iZN
 rFX
 wRP
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
-iYY
+pHb
 pHb
 pHb
 pHb
@@ -213413,8 +213423,8 @@ ajp
 gBD
 gBD
 gBD
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -213435,11 +213445,11 @@ ibI
 cZc
 xZK
 rRv
-cKc
-uSy
-cvt
-iYY
+xtc
 pHb
+cvt
+pHb
+xtc
 brC
 brC
 brC
@@ -213615,8 +213625,8 @@ ajp
 gBD
 gBD
 gBD
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -213637,12 +213647,12 @@ iCc
 hGR
 mMZ
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
-iYY
 pHb
 xtc
+itd
 gSP
 qlM
 eUw
@@ -213817,8 +213827,8 @@ ajp
 ajp
 ajp
 ajp
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -213839,12 +213849,12 @@ bCI
 qLW
 wMl
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
-iYY
 pHb
 xtc
+itd
 uBB
 itd
 itd
@@ -214019,8 +214029,8 @@ ajp
 ajp
 ajp
 ajp
-uSy
-cKc
+pHb
+xtc
 rRv
 rRv
 rRv
@@ -214041,12 +214051,12 @@ wcA
 qgC
 kfD
 rRv
-cKc
-uSy
+xtc
+pHb
 cvt
-iYY
 pHb
 xtc
+itd
 uBB
 itd
 itd
@@ -214221,7 +214231,7 @@ qCv
 lnp
 ajp
 ajp
-uSy
+pHb
 vZg
 rRv
 rRv
@@ -214244,11 +214254,11 @@ rZj
 tCi
 rRv
 lKk
-uSy
+pHb
 cvt
-iYY
 pHb
 xtc
+itd
 mJd
 itd
 itd
@@ -214423,34 +214433,34 @@ rUb
 lnp
 ajp
 ajp
-uSy
-cKc
-efR
-rRv
-rRv
-rRv
-rRv
-rRv
-efR
-rRv
-rRv
-rRv
-rRv
-efR
-rRv
-rRv
-rRv
-rRv
-rRv
-rRv
-rRv
-efR
-cKc
-uSy
-cvt
-iYY
 pHb
 xtc
+efR
+rRv
+rRv
+rRv
+rRv
+rRv
+efR
+rRv
+rRv
+rRv
+rRv
+efR
+rRv
+rRv
+rRv
+rRv
+rRv
+rRv
+rRv
+efR
+xtc
+pHb
+cvt
+pHb
+xtc
+itd
 brc
 itd
 itd
@@ -214625,34 +214635,34 @@ pXb
 wHe
 ajp
 ajp
-uSy
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-bfo
-uLR
-cKc
-cKc
-cKc
-wbr
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-cKc
-uSy
-cvt
-iYY
 pHb
 xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+bfo
+uLR
+xtc
+xtc
+xtc
+wbr
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+xtc
+pHb
+cvt
+pHb
+xtc
+itd
 uBB
 itd
 itd
@@ -214827,34 +214837,34 @@ rUb
 duU
 ajp
 ajp
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
 mBi
 kcg
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
-uSy
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
+pHb
 eCl
-uSy
+pHb
 sDV
-iYY
 pHb
 xtc
+itd
 uBB
 itd
 itd
@@ -215055,8 +215065,8 @@ iYY
 iYY
 iYY
 pHb
-pHb
 xtc
+itd
 uBB
 itd
 itd
@@ -215258,7 +215268,7 @@ iYY
 iYY
 pHb
 brC
-xtc
+itd
 uBB
 itd
 itd
