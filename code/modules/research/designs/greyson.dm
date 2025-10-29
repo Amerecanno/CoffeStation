@@ -60,7 +60,7 @@
 
 /datum/design/research/item/greyson/iron_lock_security_gloves
 	name = "Greyson Positronic Ablative Gloves"
-	build_path = /obj/item/clothing/gloves/thick/ablasive/iron_lock_security
+	build_path = /obj/item/clothing/gloves/thick/ablative/iron_lock_security
 	materials = list(MATERIAL_STEEL = 15, MATERIAL_PLASTIC = 10) //So its costs more for being RnD printed
 	category = CAT_CLOTHING
 
