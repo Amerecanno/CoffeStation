@@ -2,19 +2,19 @@
 	Meteors damage the station and the shields
 
 disabled
+
+/datum/storyevent/meteor
+	id = "meteor"
+	name = "meteor shower"
+	weight = 3
+
+	event_type = /datum/event/meteor_wave
+	event_pools = list(EVENT_LEVEL_MODERATE = POOL_THRESHOLD_MODERATE,
+	EVENT_LEVEL_MAJOR = POOL_THRESHOLD_MAJOR)
+
+	tags = list(TAG_DESTRUCTIVE, TAG_NEGATIVE, TAG_EXTERNAL)
 */
-// /datum/storyevent/meteor
-// 	id = "meteor"
-// 	name = "meteor shower"
-// 	weight = 3
-
-// 	event_type = /datum/event/meteor_wave
-// 	event_pools = list(EVENT_LEVEL_MODERATE = POOL_THRESHOLD_MODERATE,
-// 	EVENT_LEVEL_MAJOR = POOL_THRESHOLD_MAJOR)
-
-// 	tags = list(TAG_DESTRUCTIVE, TAG_NEGATIVE, TAG_EXTERNAL)
-
-// //===========================================
+//===========================================
 
 /datum/event/meteor_wave
 	startWhen		= 0//90
@@ -40,13 +40,13 @@ disabled
 	start_side = pick(cardinal)
 	endWhen = startWhen + duration
 
-// /datum/event/meteor_wave/announce()
-// 	switch(severity)
-// 		if(EVENT_LEVEL_MAJOR)
-// 			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+/datum/event/meteor_wave/announce()
+	switch(severity)
+		if(EVENT_LEVEL_MAJOR)
+			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 
-// 		else
-// 			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+		else
+			command_announcement.Announce("Обнаружены метеоры, идущие на столкновение с колонией. Время прибытия - 3 минуты до столкновения. Колонистам рекомендуется искать укрытие. Имейте в виду, объекты, летящие с орбиты, могут пробить землю и поразить нижние уровни колонии.", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 
 /datum/event/meteor_wave/tick()
 	if(activeFor >= next_meteor)
@@ -535,3 +535,4 @@ disabled
 
 /obj/effect/meteor/supermatter/get_shield_damage()
 	return ..() * rand(80, 120)
+
