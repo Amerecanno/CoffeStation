@@ -14495,6 +14495,11 @@
 	name = "Cargo - Sorting Office";
 	sortType = "Cargo - Sorting Office"
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "cWk" = (
@@ -15785,7 +15790,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/industrial/bricks,
+/turf/simulated/floor/industrial/concrete_bricks,
 /area/nadezhda/maintenance/undergroundfloor2north)
 "dkM" = (
 /obj/effect/window_lwall_spawn/reinforced,
@@ -23749,6 +23754,11 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "eMf" = (
@@ -39625,6 +39635,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white/danger,
 /area/nadezhda/medical/genetics)
+"hSK" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/under,
+/area/nadezhda/maintenance/undergroundfloor2north)
 "hSM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/landmark/join/start/premier,
@@ -56498,6 +56512,11 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "lgg" = (
@@ -62103,9 +62122,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
@@ -69308,6 +69324,16 @@
 /obj/item/oddity/common/book_log,
 /turf/simulated/floor/wood/wild1,
 /area/colony)
+"nFo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/nadezhda/quartermaster/office)
 "nFv" = (
 /obj/landmark/join/start/clubworker,
 /obj/effect/decal/cleanable/dirt,
@@ -92115,6 +92141,11 @@
 	name = "Cargo - Export";
 	sortType = "Cargo - Export"
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "sbP" = (
@@ -97316,6 +97347,11 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "ten" = (
@@ -99512,6 +99548,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
 "tzv" = (
@@ -103065,6 +103106,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/junction{
 	dir = 2
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/office)
@@ -108180,6 +108226,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/nadezhda/security/barracks)
+"vfu" = (
+/turf/simulated/floor/industrial/concrete_bricks,
+/area/nadezhda/maintenance/undergroundfloor2north)
 "vfw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/gray_platform,
@@ -121478,12 +121527,8 @@
 /area/nadezhda/maintenance/undergroundfloor1south)
 "xKp" = (
 /obj/effect/decal/cleanable/rubble,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/item/device/assembly/mousetrap/armed,
-/turf/simulated/floor/industrial/concrete_bricks,
+/turf/simulated/floor/industrial/bricks,
 /area/nadezhda/maintenance/undergroundfloor2north)
 "xKv" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -123253,6 +123298,11 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/quartermaster/hangarsupply)
 "ybr" = (
@@ -123869,6 +123919,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/bluecorner,
 /area/nadezhda/security/tactical_blackshield)
+"yiF" = (
+/obj/effect/floor_decal/industrial/warningred{
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/nadezhda/quartermaster/hangarsupply)
 "yiX" = (
 /obj/structure/boulder,
 /turf/simulated/floor/beach/water/jungledeep,
@@ -172705,17 +172766,17 @@ xKi
 xKi
 xKi
 xKi
-twX
-twX
-twX
-twX
-twX
-twX
-twX
-twX
-twX
-twX
-twX
+hSK
+hSK
+hSK
+hSK
+gmk
+gmk
+gmk
+hSK
+hSK
+hSK
+hSK
 toi
 toi
 toi
@@ -172904,9 +172965,9 @@ xKi
 xKi
 xKi
 xKi
-tJi
+vfu
 dkI
-tJi
+vfu
 twX
 twX
 twX
@@ -173108,7 +173169,7 @@ sFL
 jgV
 hFd
 xKp
-ekz
+dxI
 cAI
 twX
 nPM
@@ -173309,7 +173370,7 @@ bli
 dRK
 jgV
 kjN
-fjE
+tJi
 dBu
 cmq
 twX
@@ -173911,7 +173972,7 @@ osY
 dMP
 bli
 bli
-vtn
+vqV
 jmz
 eTj
 gWe
@@ -188310,7 +188371,7 @@ deb
 fxr
 fxr
 cCh
-cCh
+yiF
 rjb
 cCh
 cCh
@@ -190319,7 +190380,7 @@ uMI
 kWy
 tzr
 ufO
-kWy
+nFo
 kOq
 nOd
 obl
