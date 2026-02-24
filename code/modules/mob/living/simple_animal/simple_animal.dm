@@ -124,6 +124,9 @@
 
 	mob_classification = CLASSIFICATION_ORGANIC
 
+	move_intent = /decl/move_intent/run_nodelay
+	move_intents = list(/decl/move_intent/run_nodelay, /decl/move_intent/walk)
+
 /mob/living/simple/proc/beg(atom/thing, atom/holder)
 	visible_emote("gazes longingly at [holder]'s [thing]")
 
@@ -488,7 +491,7 @@
 
 	return
 
-/mob/living/simple/attackby(obj/item/O, mob/user)
+/mob/living/simple/attackby(obj/item/O, mob/living/user)
 	if(istype(O, /obj/item/gripper))
 		return ..(O, user)
 
@@ -497,7 +500,7 @@
 
 	else if(meat_type && (stat == DEAD))	//if the animal has a meat, and if it is dead.
 		if((QUALITY_CUTTING in O.tool_qualities) && user.a_intent ==  I_HELP)
-			if(O.use_tool(user, src, WORKTIME_NORMAL, QUALITY_CUTTING, FAILCHANCE_NORMAL, required_stat = STAT_BIO))
+			if(O.use_tool(user, src, WORKTIME_NORMAL - user.learnt_tasks.get_task_mastery_level("BUTCHERING"), QUALITY_CUTTING, FAILCHANCE_NORMAL - user.learnt_tasks.get_task_mastery_level("BUTCHERING"), required_stat = STAT_BIO))
 				harvest(user)
 	else
 		O.attack(src, user, user.targeted_organ)
@@ -580,27 +583,26 @@
 	return TRUE
 
 // Harvest an animal's delicious byproducts
-/mob/living/simple/proc/harvest(mob/user)
+/mob/living/simple/proc/harvest(mob/living/user)
 	var/actual_meat_amount = max(1,(meat_amount/2))
 	drop_embedded()
-	if(ishuman(user))
-		if(user.stats.getPerk(PERK_BUTCHER))
-			var/actual_leather_amount = max(0,(leather_amount/2))
-			if(actual_leather_amount > 0 && (stat == DEAD))
-				for(var/i=0;i<actual_leather_amount;i++)
-					new /obj/item/stack/material/leather(get_turf(src))
+	if(user.stats.getPerk(PERK_BUTCHER))
+		var/actual_leather_amount = max(0,(leather_amount/2))
+		if(actual_leather_amount > 0 && (stat == DEAD))
+			for(var/i=0;i<actual_leather_amount;i++)
+				new /obj/item/stack/material/leather(get_turf(src))
 
-			var/actual_bones_amount = max(0,(bones_amount/2))
-			if(actual_bones_amount > 0 && (stat == DEAD))
-				for(var/i=0;i<actual_bones_amount;i++)
-					new /obj/item/stack/material/bone(get_turf(src))
+		var/actual_bones_amount = max(0,(bones_amount/2))
+		if(actual_bones_amount > 0 && (stat == DEAD))
+			for(var/i=0;i<actual_bones_amount;i++)
+				new /obj/item/stack/material/bone(get_turf(src))
 
-			if(has_special_parts && has_rare_parts && prob(50))
-				for(var/animal_part in rare_parts)
-					new animal_part(get_turf(src))
-			else
-				for(var/animal_part in special_parts)
-					new animal_part(get_turf(src))
+		if(has_special_parts && has_rare_parts && prob(50))
+			for(var/animal_part in rare_parts)
+				new animal_part(get_turf(src))
+		else
+			for(var/animal_part in special_parts)
+				new animal_part(get_turf(src))
 
 	if(meat_type && actual_meat_amount > 0 && (stat == DEAD))
 		for(var/i=0;i<actual_meat_amount;i++)
@@ -617,14 +619,16 @@
 			new blood_from_harvest(get_turf(src))
 			qdel(src)
 		else
-			if(ishuman(user))
-				if(user.stats.getPerk(PERK_BUTCHER))
-					if(user != src)
-						user.visible_message(SPAN_DANGER("[user] butchers \the [src] cleanly!"))
-					new blood_from_harvest(get_turf(src))
+			if(user.stats.getPerk(PERK_BUTCHER) || prob(user.learnt_tasks.get_task_mastery_level("BUTCHERING")))
+				if(user != src)
+					user.visible_message(SPAN_DANGER("[user] butchers \the [src] cleanly!"))
+				new blood_from_harvest(get_turf(src))
 				qdel(src)
 			else
 				gib()
+
+	if(isliving(user))
+		user.learnt_tasks.attempt_add_task_mastery(/datum/task_master/task/butchering, "BUTCHERING", skill_gained = 1, learner = user)
 
 //Code to handle finding and nomming nearby food items
 /mob/living/simple/proc/handle_foodscanning()
@@ -675,9 +679,9 @@
 
 				if (istype(movement_target.loc, /turf))
 					if (stat != DEAD)
-						SSmove_manager.move_to(src, movement_target, 0, seek_move_delay)//Stand ontop of food
+						SSmove_manager.move_to(src, movement_target, 0, movement_delay())//Stand ontop of food
 				else if (stat != DEAD)
-					SSmove_manager.move_to(src,movement_target.loc,1, seek_move_delay)//Don't stand ontop of people
+					SSmove_manager.move_to(src,movement_target.loc,1, movement_delay())//Don't stand ontop of people
 
 
 
