@@ -8,7 +8,6 @@
 
 	restricted_to_species = list(FORM_SOTSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/surgical)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/medical)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -29,7 +28,6 @@
 
 	restricted_to_species = list(FORM_SOTSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/engineer)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/engineering)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -50,7 +48,6 @@
 
 	restricted_to_species = list(FORM_SOTSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/armblade/energy_blade)
-	racial_implants_l = (/obj/item/organ_module/active/simple/lasercannon_lasercannon)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -71,7 +68,6 @@
 
 	restricted_to_species = list(FORM_AGSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/engineer)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/engineering)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -113,7 +109,6 @@
 
 	restricted_to_species = list(FORM_AGSYNTH)
 	racial_implants = (/obj/item/organ_module/active/multitool/miner)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -133,7 +128,6 @@
 
 	restricted_to_species = list(FORM_BSSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/taser/blackshield)
-	racial_implants_l = (/obj/item/organ_module/active/simple/armblade/baton)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -173,7 +167,6 @@
 
 	restricted_to_species = list(FORM_BSSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/armsmg/blackshield)
-	racial_implants_l = (/obj/item/organ_module/active/simple/ammo_pouch)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -193,7 +186,6 @@
 
 	restricted_to_species = list(FORM_CHURCHSYNTH)
 	racial_implants = (/obj/item/organ_module/active/multitool/farmer)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -213,7 +205,6 @@
 
 	restricted_to_species = list(FORM_CHURCHSYNTH)
 	racial_implants = (/obj/item/organ_module/active/simple/armblade/longsword)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 	//restricted_jobs = list(/datum/job/outsider)
 
 	stat_modifiers = list(
@@ -254,7 +245,6 @@
 	purpose and often considered generic. It does equally well in all areas, making it suited for a variety of tasks."
 
 	restricted_to_species = list(FORM_FBP, FORM_UNBRANDED)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 
 	stat_modifiers = list(
 		STAT_ROB = 15,
@@ -274,7 +264,6 @@
 	aim of FBP's who did not let death stop them from duty."
 
 	restricted_to_species = list(FORM_FBP, FORM_UNBRANDED)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 
 	stat_modifiers = list(
 		STAT_ROB = 35,
@@ -294,7 +283,6 @@
 	tend to be on the wealthy side, as cognitive enhancers do not come cheap, but you get what you pay for and it shows in performance."
 
 	restricted_to_species = list(FORM_FBP, FORM_UNBRANDED)
-	racial_implants_l = (/obj/item/organ_module/active/multitool/lighting)
 
 	stat_modifiers = list(
 		STAT_ROB = 0,
