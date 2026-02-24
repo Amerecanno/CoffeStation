@@ -248,6 +248,55 @@
 	P.on_hit(src, def_zone)
 	. = FALSE
 
+/*
+for copy and paste ablitly
+
+bullet_weaken(P, subtractor_brute = 0, mult_brute = 1, subtractor_burn = 0, mult_burn = 1)
+
+bullet_weaken(P,0,1,0,1)
+
+*/
+/atom/proc/bullet_weaken(obj/item/projectile/P, subtractor_brute = 0, mult_brute = 1, subtractor_burn = 0, mult_burn = 1)
+
+	//We are evil and hecked up, we do subtraction before mult
+
+	if(P.penetrating != 0)
+		//Penitration nips the bud and allows you to regain a lot of bullet damage, AD does not.
+		if(subtractor_brute > 0)
+			subtractor_brute = max(0, subtractor_brute - P.penetrating)
+		if(subtractor_burn > 0)
+			subtractor_burn = max(0, subtractor_burn - P.penetrating)
+
+		//No negitives allowed.
+		if(P.penetrating > 0)
+			if(mult_brute < 1)
+				mult_brute = max(1, mult_brute * P.penetrating)
+				mult_brute = abs(mult_brute)
+			if(mult_burn < 1)
+				mult_burn = max(1, mult_burn * P.penetrating)
+				mult_burn = abs(mult_burn)
+
+	for(var/i in P.damage_types)
+
+		//message_admins("i = [i] internal P.i [P.damage_types[i]] and P = [P]")
+
+
+		if(i == BRUTE || i == HALLOSS || i == CLONE || i == BLAST)
+			P.damage_types[i] = max(0.5, P.damage_types[i] - subtractor_brute)
+			P.damage_types[i] = max(0.5, P.damage_types[i] * mult_brute)
+		if(i == BURN || i == ELECTROCUTE || i == IRRADIATE || i == CLONE || i == TOX)
+			P.damage_types[i] = max(0.5, P.damage_types[i] - subtractor_burn)
+			P.damage_types[i] = max(0.5, P.damage_types[i] * mult_burn)
+
+		//If we are mega fancy then we get both burn and brute weakening
+		if(i == OXY || i == PSY || i == TOX)
+			P.damage_types[i] = max(0.5, P.damage_types[i] - subtractor_brute)
+			P.damage_types[i] = max(0.5, P.damage_types[i] * mult_brute)
+			P.damage_types[i] = max(0.5, P.damage_types[i] - subtractor_burn)
+			P.damage_types[i] = max(0.5, P.damage_types[i] * mult_burn)
+
+		//message_admins("POST NERF: i = [i] internal P.i [P.damage_types[i]] and P = [P]")
+
 /atom/proc/block_bullet(mob/user, var/obj/item/projectile/damage_source, def_zone)
 	return 0
 
@@ -430,6 +479,19 @@ its easier to just keep the beam vertical.
 					to_chat(user, SPAN_NOTICE("[reagents.total_volume] units of what looks like [master_reagent.name]."))
 				else
 					to_chat(user, SPAN_NOTICE("[reagents.total_volume] units of various reagents."))
+
+			var/list/all_taste_tags = list()
+			for(var/datum/reagent/R in reagents.reagent_list)
+				if(islist(R.taste_tag))
+					for(var/tag in R.taste_tag)
+						all_taste_tags |= tag
+				else
+					all_taste_tags |= R.taste_tag
+
+			if(all_taste_tags.len)
+				var/the_final_taste = jointext(all_taste_tags, ", ")
+				to_chat(user, SPAN_NOTICE("A quick waft will tell you it tastes like: [the_final_taste]"))
+
 // End of SoJ changes
 		else
 			if(reagent_flags & AMOUNT_VISIBLE)
