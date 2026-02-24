@@ -84,6 +84,13 @@
 			remaining_ablative *= 0.8
 			armor *= 0.8
 
+		//We give 25% armor, if armor reduction, then we recover a bit of armor. Order Of Operations
+		if(stats.getPerk(PERK_BOLUS_ARMOR))
+			ablative_armor *= 1.25
+			remaining_ablative *= 1.25
+			armor *= 1.25
+
+
 	for(var/dmg_type in dmg_types)
 		var/dmg = dmg_types[dmg_type]
 		if(dmg)
@@ -237,6 +244,10 @@
 	if (P.is_hot() >= HEAT_MOBIGNITE_THRESHOLD)
 		IgniteMob()
 
+	if(unnatural_mutations.getMutation(MUTATION_XENO_SKIN))
+		P.sharp = 0
+		P.edge = 0
+
 	//Being hit while using a deadman switch
 	if(istype(get_active_hand(),/obj/item/device/assembly/signaler))
 		var/obj/item/device/assembly/signaler/signaler = get_active_hand()
@@ -331,6 +342,10 @@
 	//Hulk modifier
 //	if(HULK in user.mutations)
 //		effective_force *= 2
+
+	if(unnatural_mutations.getMutation(MUTATION_XENO_SKIN))
+		I.sharp = 0
+		I.edge = 0
 
 	//Apply weapon damage
 	if (damage_through_armor(effective_force, I.damtype, hit_zone, ARMOR_MELEE, I.armor_divisor, used_weapon = I, sharp = is_sharp(I), edge = has_edge(I)))
