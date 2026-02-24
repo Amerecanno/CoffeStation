@@ -72,11 +72,12 @@
 	if(issuperioranimal(M))
 		if(M.stat!=DEAD)
 			var/flash_strength = 10
-			var/mob/living/carbon/superior/S = M
-			flash_strength -= S.flash_resistances + S.eyecheck()
+			if(issuperioranimal(M))
+				var/mob/living/carbon/superior/H = M
+				flash_strength -= H.flash_resistances
 			if(flash_strength > 0)
-				S.Weaken(flash_strength)
-				user.visible_message(SPAN_NOTICE("[user] overloads [S]'s sensors with the flash!")) //This IS what we want.
+				M.Weaken(flash_strength)
+				user.visible_message(SPAN_NOTICE("[user] overloads [M]'s sensors with the flash!")) //This IS what we want.
 				return //hacky way to stop miss-messages for the player. but should work
 			else
 				flashfail = TRUE

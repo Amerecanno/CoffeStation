@@ -15,7 +15,6 @@
 	melee_damage_upper = 5
 	move_to_delay = 4
 	research_value = 500
-	hierarchy = 3
 
 /mob/living/carbon/superior/roach/plasmaroach/UnarmedAttack(atom/A, proximity)
 	. = ..()

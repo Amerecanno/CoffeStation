@@ -131,7 +131,6 @@
 	var/predetermed = null //Used for NPCs to sudo rng, uses define zones directly
 
 	var/steel_rain = 0
-	var/entanglement_level = 0
 
 /obj/item/projectile/New()
 
@@ -216,7 +215,6 @@
 			L.IgniteMob()
 			src.visible_message(SPAN_WARNING("\The [src] sets [target] on fire!"))
 		L.apply_effects(stun, weaken, paralyze, irradiate, stutter, eyeblur, drowsy)
-		L.entanglement += entanglement_level
 	return TRUE
 
 // generate impact effect
@@ -1034,10 +1032,6 @@
 	current = startloc
 	yo = targloc.y - startloc.y + y_offset
 	xo = targloc.x - startloc.x + x_offset
-
-	//Used for cover mechanics
-	//This also ensures that are bullet direction is legitment with redirected bullets from walls
-	dir = get_dir(startloc, targloc)
 
 	// plot the initial trajectory
 	trajectory = new()

@@ -39,11 +39,6 @@
 
 	var/total_instability = 0 //How much instability is present in the gene pool.
 
-	var/allowed_instability_was = DESTABILIZE_LEVEL_WAS //How much instability we allow before we start to mutate into a once was
-	var/allowed_instability_clone = DESTABILIZE_LEVEL_CLONE_DAMAGE //How much untill we take clone damage
-	var/allowed_instability_base = DESTABILIZE_LEVEL_BASE //How much untill we start destablization.
-
-
 	var/initialized = FALSE //Whether or not the held genes have been applied to the holder.
 
 	var/processing_destabilization = FALSE //Whether or not we've kicked off the process to cause destabilization.
@@ -504,14 +499,14 @@
 
 	if(processing_destabilization)
 		//Stop processing if we fall below the base value, or if the holder is already dead- Since we won't be needing it anymore
-		if(total_instability < allowed_instability_base)
+		if(total_instability < DESTABILIZE_LEVEL_BASE)
 			STOP_PROCESSING(SSprocessing, src)
 			stage = 0
 			processing_destabilization = FALSE
 			return "turning off destabilization"
 	else
 		//Start the process if we hit the threshold base value
-		if(total_instability >= allowed_instability_base)
+		if(total_instability >= DESTABILIZE_LEVEL_BASE)
 			last_destability_check = world.time
 			START_PROCESSING(SSprocessing, src)
 			processing_destabilization = TRUE
@@ -526,7 +521,7 @@
 
 	last_destability_check = world.time
 
-	if(total_instability >= allowed_instability_was)
+	if(total_instability >= DESTABILIZE_LEVEL_WAS)
 		stage++
 		switch(stage)
 			if(1)
@@ -539,8 +534,12 @@
 			if(13)
 				holder.visible_message(SPAN_DANGER("[holder] shifts and reforms into... By science... What is that!?"))
 				new /mob/living/carbon/superior/psi/wasonce(holder)
-	if((total_instability >= allowed_instability_clone) && (holder.getCloneLoss() < 30))
+	if((total_instability >= DESTABILIZE_LEVEL_CLONE_DAMAGE) && (holder.getCloneLoss() < 30))
 		holder.adjustCloneLoss(1)
+
+
+
+
 
 //
 /datum/genetics/genetics_holder/nano_ui_data(var/list/known_mutations)

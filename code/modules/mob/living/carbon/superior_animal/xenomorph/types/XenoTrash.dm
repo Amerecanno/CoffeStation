@@ -57,4 +57,3 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 7
-	inherent_mutations = list(MUTATION_CAT_EYES, MUTATION_XENO_TOX_RES)

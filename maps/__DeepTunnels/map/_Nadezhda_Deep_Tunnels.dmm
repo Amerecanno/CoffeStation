@@ -3264,12 +3264,15 @@
 /turf/simulated/floor/tiled/white,
 /area/nadezhda/rnd/outpoststorage)
 "jf" = (
-/obj/structure/closet/crate,
-/obj/item/stack/material/wood/random,
-/obj/item/stack/material/wood/random,
-/obj/item/stack/material/wood/random,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6;
+	tag = "icon-intact (SOUTHEAST)"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/gray_platform,
+/area/nadezhda/rnd/outpostbotany)
 "jg" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 8
@@ -3277,12 +3280,24 @@
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/rnd/outpostbotany)
 "jh" = (
-/obj/structure/bolus/liquid_to_soild{
-	pixel_y = 6
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/large/moebius/nuclear;
+	dir = 1;
+	name = "North APC";
+	pixel_y = 28
 	},
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/industrial/warningred{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/nadezhda/rnd/outpostbotany)
 "ji" = (
 /obj/random/cluster/spiders/low_chance,
 /turf/simulated/floor/asteroid,
@@ -3638,10 +3653,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/rnd/mixing)
 "ka" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice,
+/turf/simulated/mineral/random,
 /area/nadezhda/rnd/outpostgeneral)
 "kb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3996,10 +4010,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/rnd/outpostbotany)
 "kZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/white/violetcorener,
-/area/nadezhda/rnd/outpostgeneral)
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/steel,
+/area/nadezhda/rnd/outpostbotany)
 "lb" = (
 /obj/structure/table/rack/shelf,
 /obj/random/science/low_chance,
@@ -4048,11 +4064,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/rnd/outpostbotany)
 "lf" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25
 	},
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
+/turf/simulated/floor/tiled/steel,
+/area/nadezhda/rnd/outpostbotany)
 "lg" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/syringes,
@@ -6683,8 +6700,12 @@
 /area/nadezhda/rnd/outpostgeneral)
 "rb" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
 "rc" = (
@@ -6738,26 +6759,16 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
 "rk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
 "rl" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
 "rm" = (
@@ -6799,7 +6810,6 @@
 /area/nadezhda/rnd/outpostgeneral)
 "rs" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
 "rt" = (
@@ -7715,15 +7725,6 @@
 	},
 /turf/simulated/floor/tiled/white/cargo,
 /area/nadezhda/rnd/outpostgeneral)
-"tQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "tR" = (
 /obj/machinery/camera/network/research{
 	dir = 4
@@ -8201,12 +8202,6 @@
 /obj/random/cluster/golem/lower_chance,
 /turf/simulated/floor/asteroid,
 /area/mine/unexplored)
-"vk" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
-/area/nadezhda/rnd/outpostbotany)
 "vl" = (
 /obj/random/cluster/golem/low_chance,
 /turf/simulated/floor/asteroid,
@@ -8309,10 +8304,6 @@
 	},
 /turf/simulated/floor/tiled/steel/danger,
 /area/mine/hallway)
-"xJ" = (
-/obj/structure/bolus/maker,
-/turf/simulated/floor/tiled/white/gray_perforated,
-/area/nadezhda/rnd/outpostgeneral)
 "xK" = (
 /obj/machinery/light{
 	dir = 1
@@ -8353,16 +8344,6 @@
 	},
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
-"yh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/door/airlock/glass_medical,
-/turf/simulated/floor/tiled/white/violetcorener,
-/area/nadezhda/rnd/outpostgeneral)
 "yi" = (
 /obj/machinery/artifact_scanpad,
 /turf/simulated/floor/tiled/dark,
@@ -8382,10 +8363,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
 /turf/simulated/floor/tiled/white/techfloor_grid,
 /area/nadezhda/rnd/mixing)
-"yC" = (
-/obj/machinery/door/airlock/glass_medical,
-/turf/simulated/floor/tiled/white/violetcorener,
-/area/nadezhda/rnd/outpostgeneral)
 "yH" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 10
@@ -8399,12 +8376,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/mine/hallway)
-"zj" = (
-/obj/structure/table/rack/shelf,
-/obj/item/reagent_containers/glass/plastic_jug,
-/obj/item/reagent_containers/glass/plastic_jug,
-/turf/simulated/floor/tiled/white/brown_perforated,
-/area/nadezhda/rnd/outpostgeneral)
 "zy" = (
 /turf/unsimulated/mask,
 /area/nadezhda/rnd/mixing)
@@ -8588,13 +8559,6 @@
 /obj/structure/lattice,
 /turf/simulated/floor/fixed/hydrotile/shallowcoolant,
 /area/nadezhda/rnd/mixing)
-"CZ" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 6;
-	tag = "icon-intact (SOUTHEAST)"
-	},
-/turf/simulated/floor/tiled/dark/gray_platform,
-/area/nadezhda/rnd/outpostbotany)
 "Dv" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/asteroid,
@@ -8667,19 +8631,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/nadezhda/rnd/mixing)
-"Ew" = (
-/obj/structure/table/rack/shelf,
-/obj/item/stack/ore{
-	amount = 90
-	},
-/turf/simulated/floor/tiled/white/brown_perforated,
-/area/nadezhda/rnd/outpostgeneral)
-"EA" = (
-/obj/structure/table/standard,
-/obj/item/pen/multi,
-/obj/item/paper_bin,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "EE" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
@@ -8703,15 +8654,6 @@
 /obj/effect/floor_decal/industrial/stand_clear/red,
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
-"EW" = (
-/obj/effect/floor_decal/industrial/warningred{
-	dir = 4
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 24
-	},
-/turf/simulated/floor/tiled/steel,
-/area/nadezhda/rnd/outpostbotany)
 "Fm" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -8729,12 +8671,6 @@
 /obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/asteroid,
 /area/nadezhda/quartermaster/mining_outside_doc)
-"Fx" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white/gray_perforated,
-/area/nadezhda/rnd/outpostgeneral)
 "FA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
@@ -8748,15 +8684,6 @@
 /obj/structure/sign/warning/hazard_radiation,
 /turf/simulated/wall/r_wall,
 /area/mine/hallway)
-"FD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white/violetcorener,
-/area/nadezhda/rnd/outpostgeneral)
 "FE" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4;
@@ -8782,13 +8709,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/rnd/anomalisolfour)
-"Gn" = (
-/obj/structure/bolus/cellose{
-	pixel_y = 6
-	},
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "Gv" = (
 /obj/machinery/door/airlock/science{
 	name = "Anomaly Research";
@@ -8840,12 +8760,6 @@
 	},
 /turf/simulated/floor/tiled/white/violetcorener,
 /area/nadezhda/rnd/outpostgeneral)
-"HH" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/nadezhda/rnd/outpostgeneral)
 "HL" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
@@ -8895,10 +8809,6 @@
 "IH" = (
 /turf/simulated/floor/asteroid,
 /area/nadezhda/rnd/mixing)
-"IQ" = (
-/obj/structure/bolus/stillifer,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "IX" = (
 /obj/structure/table/standard,
 /obj/item/device/lighting/toggleable/lamp,
@@ -9087,28 +8997,6 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/asteroid,
 /area/nadezhda/quartermaster/mining_outside_doc)
-"ML" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white/gray_perforated,
-/area/nadezhda/rnd/outpostgeneral)
-"MP" = (
-/obj/machinery/atmospherics/unary/vent_scrubber{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
-"MQ" = (
-/obj/structure/bolus/roller{
-	pixel_y = 6
-	},
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "MR" = (
 /obj/machinery/psionic_harvester,
 /turf/simulated/floor/tiled/dark,
@@ -9172,15 +9060,6 @@
 	},
 /turf/simulated/floor/tiled/white/brown_perforated,
 /area/nadezhda/rnd/outpostgeneral)
-"OV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white/violetcorener,
-/area/nadezhda/rnd/outpostgeneral)
 "OY" = (
 /obj/structure/catwalk,
 /obj/structure/window/reinforced/plasma{
@@ -9222,10 +9101,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel/danger,
 /area/mine/hallway)
-"Qt" = (
-/obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/tiled/white/gray_perforated,
-/area/nadezhda/rnd/outpostgeneral)
 "Qy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -9330,19 +9205,6 @@
 /obj/structure/lattice,
 /turf/simulated/floor/fixed/hydrotile/shallowcoolant,
 /area/nadezhda/rnd/mixing)
-"Sj" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/large/moebius/nuclear;
-	dir = 1;
-	name = "North APC";
-	pixel_y = 28
-	},
-/turf/simulated/floor/tiled/steel,
-/area/nadezhda/rnd/outpostbotany)
 "Sr" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
@@ -9400,10 +9262,6 @@
 "SL" = (
 /turf/simulated/mineral,
 /area/mine/unexplored)
-"SQ" = (
-/obj/machinery/reagentgrinder/industrial,
-/turf/simulated/floor/tiled/dark,
-/area/nadezhda/rnd/outpostgeneral)
 "SZ" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
@@ -9473,9 +9331,6 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/steel/brown_platform,
 /area/nadezhda/rnd/outpostmachineroom)
-"UH" = (
-/turf/unsimulated/mask,
-/area/nadezhda/rnd/outpostbotany)
 "UI" = (
 /obj/effect/decal/cleanable/rubble,
 /obj/structure/catwalk,
@@ -9578,8 +9433,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/sink/basion,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/asteroid,
 /area/nadezhda/rnd/outpostgeneral)
 "Xq" = (
 /obj/machinery/light{
@@ -9699,12 +9553,6 @@
 "Zb" = (
 /turf/simulated/floor/asteroid,
 /area/nadezhda/quartermaster/mining_outside_doc)
-"Zc" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white/gray_perforated,
-/area/nadezhda/rnd/outpostgeneral)
 "Zu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -11746,11 +11594,11 @@ pU
 qV
 rj
 rs
-rv
-kl
+ih
 ks
 ks
 ks
+lz
 lz
 aa
 "}
@@ -11946,14 +11794,14 @@ qm
 qB
 qB
 qW
-oP
+jH
 tu
 ih
-ih
-ih
-ih
-ih
-ih
+lz
+ks
+ks
+ks
+lz
 aa
 "}
 (12,1,1) = {"
@@ -12148,14 +11996,14 @@ qn
 qC
 qL
 qX
-oP
+jH
 tY
 ih
-rt
-Fx
-Qt
-zj
-ih
+lz
+ks
+ks
+lz
+lz
 aa
 "}
 (13,1,1) = {"
@@ -12353,11 +12201,11 @@ qY
 rk
 ru
 ih
-rt
-xJ
-Qt
-rF
-ih
+lz
+ks
+ks
+lz
+lz
 aa
 "}
 (14,1,1) = {"
@@ -12552,14 +12400,14 @@ qN
 qN
 qN
 qZ
-HH
 ih
 ih
-ML
-ML
-Zc
-Ew
 ih
+lz
+ks
+ks
+lz
+lz
 aa
 "}
 (15,1,1) = {"
@@ -12754,14 +12602,14 @@ jH
 jH
 jH
 ra
-oP
-qN
-MQ
-XA
-XA
-XA
-EA
+jH
 ih
+ih
+lz
+ks
+ks
+ks
+lz
 aa
 "}
 (16,1,1) = {"
@@ -12956,14 +12804,14 @@ jH
 jH
 xX
 ra
-oP
-qN
-IQ
-XA
-XA
-XA
-jf
+jH
 ih
+lz
+lz
+lz
+ks
+ks
+ks
 aa
 "}
 (17,1,1) = {"
@@ -13159,13 +13007,13 @@ tt
 Hq
 rb
 rl
-qN
-Gn
+rv
 ka
-lf
-XA
-SQ
-ih
+ka
+kl
+ks
+ks
+ks
 aa
 "}
 (18,1,1) = {"
@@ -13359,15 +13207,15 @@ ih
 ih
 ih
 tW
-ra
 jH
-qN
-jh
-tQ
-MP
-XA
-Xo
+jH
 ih
+lz
+lz
+lz
+ks
+Xo
+ks
 aa
 "}
 (19,1,1) = {"
@@ -13561,13 +13409,13 @@ ih
 ih
 ih
 jN
-ra
+jH
 jH
 ih
 ih
-yh
 ih
-yC
+ih
+ih
 ih
 ih
 aa
@@ -13763,11 +13611,11 @@ qb
 qp
 ih
 tX
-ra
+jH
 jH
 tm
 jH
-ra
+jH
 rw
 jH
 jH
@@ -13933,7 +13781,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kp
 lc
@@ -13965,11 +13813,11 @@ iD
 iD
 qF
 jH
-OV
-kZ
-kZ
-kZ
-FD
+jH
+jH
+jH
+jH
+jH
 jH
 jH
 jH
@@ -14135,7 +13983,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kq
 lg
@@ -14337,10 +14185,10 @@ ti
 ti
 ti
 ti
-UH
 kK
-kn
-kY
+jf
+kr
+le
 kY
 lp
 mh
@@ -14539,9 +14387,9 @@ ti
 ti
 ti
 ti
-UH
 kK
-vk
+jg
+kt
 kY
 kY
 lp
@@ -14741,9 +14589,9 @@ ti
 ti
 ti
 ti
-UH
 kK
-Sj
+jh
+kx
 kx
 lk
 lq
@@ -14943,7 +14791,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 ky
 kY
@@ -15145,7 +14993,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kz
 kY
@@ -15347,7 +15195,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kA
 kY
@@ -15549,7 +15397,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kN
 kY
@@ -15751,7 +15599,7 @@ ti
 ti
 ti
 ti
-UH
+kK
 kK
 kQ
 kY
@@ -15953,9 +15801,9 @@ ti
 ti
 ti
 ti
-UH
 kK
 jD
+kY
 kY
 lm
 lm
@@ -16156,8 +16004,8 @@ ti
 ti
 ti
 kK
-kK
 kk
+kY
 kY
 lm
 lH
@@ -16358,9 +16206,9 @@ ti
 ti
 ti
 kK
-CZ
-kr
-le
+kn
+kZ
+lf
 lm
 lS
 lS
@@ -16560,9 +16408,9 @@ ti
 ti
 ti
 kK
-jg
-kt
-EW
+kK
+kK
+kK
 lm
 lT
 mu
@@ -16761,9 +16609,9 @@ ti
 ti
 ti
 ti
-np
-np
-np
+ti
+ti
+ti
 kK
 kK
 kK

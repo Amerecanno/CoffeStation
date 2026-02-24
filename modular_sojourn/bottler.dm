@@ -12,6 +12,7 @@
 	..()
 	to_chat(user, "<span class='info'>Current glass bottle printing type: [fake_glass_name].</span>")
 
+
 /obj/item/bottle_kit/attack_self(mob/user as mob)
 	..()
 	glass_picker(user)
@@ -31,6 +32,7 @@
 	options["Approximate Sea Shore"] = "brew_pianowoman_bottle"
 	options["Faded Dust"] = "brew_noir_bottle"
 	options["Close Honeycomb"] = "brew_bees_bottle"
+
 
 	if(!options.len)
 		to_chat(user, "<span class='info'>The bottle kit is limited to only normal blue bottles. Oh no!</span>")

@@ -9,81 +9,11 @@ uniquic_armor_act
 
 /mob/living/carbon/human/bullet_act(var/obj/item/projectile/P, var/def_zone)
 
-	//We only care about cover if we are actively blocking to save on processing
-	if(blocking)
-		//This is the tile we just came frome
-		var/turf/getstep_other = get_step(src, reverse_direction(P.dir))
-		var/can_abuse_cover = TRUE
-		//These are only able to be done on the same tile, tables, and shields
-		for(var/obj/structure/shield_deployed/SD in loc)
-
-			if(SD.this_direction_is_protected(P))
-				//We are a literal shield and is working at its maxium to protect are user. Let this tank us!
-				SD.damage(P.get_structure_damage())
-				bullet_weaken(P, subtractor_brute = 12, mult_brute = 0.2, subtractor_burn = 12, mult_burn = 0.2)
-				visible_message(SPAN_NOTICE("[P] struggles to penitrate [src].")) //Feedback to do the not of this
-				can_abuse_cover = FALSE
-				break
-
-		/*Tables, are complex.
-		If someone with more time and care wants to make a system
-		That dynamically looks at:
-		Table Materal
-		Checks directions proper
-		Ensures that the table cover system is fair and logical
-		As well as fix up table code in general to fit a more realisic/gamifed balanced system
-		Then good luck! - Trilby*/
-
-		if(can_abuse_cover)
-			for(var/obj/structure/table/flippy in loc)
-				if(flippy.check_cover(P))
-					bullet_weaken(P, subtractor_brute = 2, mult_brute = 0.8, subtractor_burn = 4, mult_burn = 0.6)
-					can_abuse_cover = FALSE
-					break
-
-		//These are a the tile the bullet passed, but we are blocking so we abuse cover a bit to weaken the shot if unblocked
-		//Mainly grills, low walls and barricades
-
-		if(can_abuse_cover)
-			for(var/obj/structure/grille/wirefence in getstep_other.contents)
-				bullet_weaken(P, subtractor_brute = 2, mult_brute = 0.8, subtractor_burn = 4, mult_burn = 0.6)
-				wirefence.health = health - P.get_structure_damage()
-				wirefence.healthCheck()
-				can_abuse_cover = FALSE
-				break
-
-		if(can_abuse_cover)
-			for(var/obj/structure/barricade/CB in getstep_other.contents)
-				bullet_weaken(P, subtractor_brute = 1, mult_brute = 0.9, subtractor_burn = 0, mult_burn = 0.8)
-				CB.health = health - P.get_structure_damage()
-				CB.healthCheck()
-				can_abuse_cover = FALSE
-				break
-
-		//Low walls, are complex, please see the ablve with tables. - Trilby, p.s Tables and Low walls are coded almost 1:1,
-		//and both have what I can only describe as fundimental issues with blocking.
-		if(can_abuse_cover)
-			for(var/obj/structure/low_wall/bunker_down in getstep_other.contents)
-				if(bunker_down.check_cover(P))
-					bullet_weaken(P, subtractor_brute = 2, mult_brute = 0.8, subtractor_burn = 4, mult_burn = 0.6)
-					can_abuse_cover = FALSE
-					break
-
-	//Order of operations, burn through a cover's armor before missing or doing other checks
-
-
 	def_zone = check_zone(def_zone)
 	if(!has_organ(def_zone))
 		return PROJECTILE_FORCE_MISS //if they don't have the organ in question then the projectile just passes by.
 
 	unique_armor_check(P, null, null)
-
-	if(unnatural_mutations.getMutation(MUTATION_XENO_SKIN))
-		if(prob(25)) //So we dont affectively replace a racel perk
-			P.embed = FALSE
-		P.sharp = FALSE
-		P.edge = FALSE
-
 
 	var/obj/item/organ/external/organ = get_organ(def_zone)
 
@@ -106,7 +36,6 @@ uniquic_armor_act
 
 		var/check_absorb = .
 		//Shrapnel
-
 		if(P.can_embed() && (check_absorb < 2) && !src.stats.getPerk(PERK_IRON_FLESH))
 			var/armor = getarmor_organ(organ, ARMOR_BULLET)
 			if(prob((10 + max(P.damage_types[BRUTE] - (armor * (3 - P.wounding_mult)), -10) * P.embed_mult))) //Good/high armor can fully protect against sharpnal
@@ -131,15 +60,13 @@ uniquic_armor_act
 	if(!dir) // Same turf as the source
 		return
 
-	if(!unnatural_mutations.getMutation(MUTATION_STABLE_BALANCE))
+	var/r_dir = reverse_dir[dir]
+	var/hit_dirs = (r_dir in cardinal) ? r_dir : list(r_dir & NORTH|SOUTH, r_dir & EAST|WEST)
 
-		var/r_dir = reverse_dir[dir]
-		var/hit_dirs = (r_dir in cardinal) ? r_dir : list(r_dir & NORTH|SOUTH, r_dir & EAST|WEST)
-
-		if(hit_zone == BP_R_LEG || hit_zone == BP_L_LEG)
-			if(prob((5 + damage) - stats.getStat(STAT_TGH)))
-				step(src, pick(cardinal - hit_dirs))
-				visible_message(SPAN_WARNING("[src] stumbles around."))
+	if(hit_zone == BP_R_LEG || hit_zone == BP_L_LEG)
+		if(prob(60 - stats.getStat(STAT_TGH)))
+			step(src, pick(cardinal - hit_dirs))
+			visible_message(SPAN_WARNING("[src] stumbles around."))
 
 /mob/living/carbon/human/stun_effect_act(var/stun_amount, var/agony_amount, var/def_zone)
 
@@ -423,10 +350,6 @@ uniquic_armor_act
 			if(effective_force == 0)
 				visible_message(SPAN_DANGER("The attack has been completely negated!"))
 				return FALSE
-
-	if(unnatural_mutations.getMutation(MUTATION_XENO_SKIN))
-		I.sharp = 0
-		I.edge = 0
 
 	//If not blocked, handle broad strike attacks
 	if(((I.sharp && I.edge && user.a_intent == I_DISARM) || I.forced_broad_strike) && (!istype(I, /obj/item/tool/sword/nt/spear) || !istype(I, /obj/item/tele_spear) || !istype(I, /obj/item/tool/spear)))
@@ -746,8 +669,8 @@ uniquic_armor_act
 			/obj/machinery/power/os_turret,
 			/mob/living/simple/hostile/megafauna/hivemind_tyrant,
 			/mob/living/simple/hostile/megafauna/one_star,
-			/mob/living/carbon/superior/robot/forgotton,
-			/mob/living/carbon/superior/robot/forgotton/sentinal_seeker,
+			/mob/living/simple/hostile/republicon,
+			/mob/living/carbon/superior/sentinal_seeker,
 			/mob/living/carbon/superior/roach/elektromagnetisch, //beep boop
 			/mob/living/carbon/superior/roach/nanite,
 			/mob/living/simple/hostile/naniteswarm,

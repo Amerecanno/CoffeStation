@@ -35,7 +35,6 @@
 	mob_size = MOB_LARGE
 	sanity_damage = 1
 	research_value = 375
-	inherent_mutations = list(MUTATION_STABLE_BALANCE)
 
 /mob/living/simple/hostile/dino/tagilla
 	faction = "neutral"

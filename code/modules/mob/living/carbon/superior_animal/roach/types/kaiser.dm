@@ -59,7 +59,6 @@ Has ability of every roach.
 	fancy_attack_shading = "#7C919A"
 	//randomize_attack_effect_location = FALSE Accually quite cool
 	research_value = 3500
-	hierarchy = 10
 
 /mob/living/carbon/superior/roach/kaiser/getTargets()
 	. = ..()

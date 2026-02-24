@@ -224,7 +224,6 @@
 
 //Genetics Perks
 #define PERK_SPLICED /datum/perk/spliced
-#define PERK_GLUTTEN /datum/perk/glutten
 
 // Food perks
 #define PERK_CARNIVORE /datum/perk/carnivore
@@ -263,7 +262,6 @@
 #define PERK_COOLDOWN_EXERTION /datum/perk/cooldown/exertion
 #define PERK_ARMOR_REDUCTION /datum/perk/cooldown/armor_reduction
 #define PERK_ARMOR_UP /datum/perk/cooldown/armor_up
-#define PERK_CONTEMPT_GAZE /datum/perk/cooldown/contempt_gaze
 //Anti-art
 #define PERK_ARTIST_NO /datum/perk/cooldown/artist_no
 //Church Cooldown
@@ -279,14 +277,4 @@
 #define PERK_STILLPONT_RUPTURE /datum/perk/cooldown/stillpoint_rupture
 #define PERK_STILLPONT_BURN /datum/perk/cooldown/stillpoint_burn
 #define PERK_STILLPONT_TREMER /datum/perk/cooldown/stillpoint_tremer
-
-///////////////
-//Bolus perks//
-///////////////
-#define PERK_BOLUS_WEAKEN /datum/perk/cooldown/bolus_weaken
-#define PERK_BOLUS_ARMOR /datum/perk/cooldown/bolus_armor
-#define PERK_BOLUS_EQUI_AID /datum/perk/cooldown/bolus_momentiums
-#define PERK_BOLUS_AID /datum/perk/cooldown/bolus_healing
-#define PERK_BOLUS_REVIVE /datum/perk/cooldown/bolus_revive
-#define PERK_BOLUS_CQC /datum/perk/cooldown/bolus_cqc
 

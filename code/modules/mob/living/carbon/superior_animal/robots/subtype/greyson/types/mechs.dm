@@ -1,5 +1,5 @@
 /mob/living/carbon/superior/robot/gp/synth/ripley
-	name = "Greyson Positronic Ripley Unit"
+	name = "Greyson Positronic Ripley unit"
 	desc = "An AI controlled autonomous power loading unit equipped with a diamond tipped drill."
 	icon_state = "greyson_ripley"
 	attacktext = "drilled"
@@ -9,7 +9,6 @@
 	melee_damage_upper = 45
 	attack_sound = 'sound/mecha/mechdrill.ogg'
 	flash_resistances = 100 // Robot
-	can_block = FALSE //No
 
 	allowed_stat_modifiers = list(
 		/datum/stat_modifier/mob/living/carbon/superior/durable = 20,
@@ -103,7 +102,7 @@
 				return TRUE
 
 /mob/living/carbon/superior/robot/gp/synth/ripley/phazon
-	name = "Greyson Positronic Phazon Unit"
+	name = "Greyson Positronic Phazon unit"
 	desc = "An AI controlled phazon mecha equipped with reinforced armor, a power fist the size of a giant spider, and a modified phazing drive that lets it move far faster than its bulk should allow."
 	icon = 'icons/mob/mobs-humanoid.dmi'
 	icon_state = "greyson_phazon"

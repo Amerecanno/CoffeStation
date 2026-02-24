@@ -19,7 +19,6 @@
 	friendly_to_colony = TRUE
 	randpixel = 0
 	research_value = 100
-	inherent_mutations = list(MUTATION_HARDEN_EARS)
 
 /mob/living/carbon/superior/lodge/cerberus/Life()
 	. = ..()
@@ -125,7 +124,6 @@
 	friendly_to_colony = TRUE
 	randpixel = 0
 	research_value = 75
-	inherent_mutations = list(MUTATION_HARDEN_EARS)
 
 /mob/living/carbon/superior/lodge/baby_cerberus/add_initial_transforms()
 	. = ..()

@@ -22,10 +22,6 @@
 	if(species.reagent_tag == IS_SYNTHETIC)
 		synth = TRUE
 
-	if(unnatural_mutations.getMutation(MUTATION_BLUBBER))
-		frost -= 5 //This is affectively -6, way more powerful then you would think
-
-
 	if(frost)
 
 		if(frost > max_frost)

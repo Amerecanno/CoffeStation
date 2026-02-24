@@ -4,5 +4,3 @@
 	eating_time = 2 MINUTES // how long it will take to eat/lay egg
 	snacker = TRUE
 	probability_egg_laying = 80
-
-	hierarchy = 5

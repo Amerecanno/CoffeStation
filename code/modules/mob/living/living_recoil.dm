@@ -21,9 +21,9 @@
 	var/scale = 0.9
 
 	if(ishuman(src))
-		if(stats.getPerk(PERK_PERFECT_SHOT))
+		if(usr.stats.getPerk(PERK_PERFECT_SHOT))
 			scale = 0.5 //less recoil build up
-		if(stats.getPerk(PERK_SMARTLINK))
+		if(usr.stats.getPerk(PERK_SMARTLINK))
 			scale = 0.8 //Not as crazy as racial because it's kriosan niche
 
 	if(recoil <= base)
@@ -40,13 +40,6 @@
 		var/mob/living/carbon/human/H = src
 		if(H.head)
 			offset += H.head.obscuration
-
-			//The Aid of a Bolus designed to reduce the penitalies of equipment
-			if(H.stats.getPerk(PERK_BOLUS_EQUI_AID))
-				var/datum/perk/cooldown/bolus_momentiums/TA = H.stats.getPerk(PERK_BOLUS_EQUI_AID)
-				offset -= H.head.obscuration / TA.stage
-
-
 		offset -= CLAMP(H.stats.getStat(STAT_VIG), 0, STAT_LEVEL_PROF) * 0.1 // Up to max -6 offset
 
 	offset = round(offset)

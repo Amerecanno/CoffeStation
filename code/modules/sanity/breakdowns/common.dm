@@ -206,7 +206,7 @@
 	if(msg == message)
 		finished = TRUE
 
-/datum/breakdown/common/noinsight
+datum/breakdown/common/noinsight
 	name = "Stagnation"
 	duration = 10 MINUTES
 	restore_sanity_post = 150
@@ -216,16 +216,22 @@
 		"You glumb unable to get inspration for craft or self improvement"
 	)
 
-/datum/breakdown/common/noinsight/occur()
+	var/insight_passive_gain_multiplier = 0
+
+/datum/breakdown/common/noinsight/update()
+	. = ..()
+	if(!.)
+		return FALSE
+	if(insight_passive_gain_multiplier)
+		return FALSE
 	if(ishuman(holder.owner))
 		var/mob/living/carbon/human/H = holder.owner
-		H.sanity.insight_passive_gain_multiplier -= 0.5
-	return ..()
+		H.sanity.insight_passive_gain_multiplier -= 1
 
 /datum/breakdown/common/noinsight/conclude()
 	if(ishuman(holder.owner))
 		var/mob/living/carbon/human/H = holder.owner
-		H.sanity.insight_passive_gain_multiplier += 0.5
+		H.sanity.insight_passive_gain_multiplier += 1
 	..()
 
 //Church based common powers

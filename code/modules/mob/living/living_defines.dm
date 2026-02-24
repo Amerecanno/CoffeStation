@@ -146,5 +146,3 @@
 
 	var/mob_ablative_armor = 0
 	var/ablative_retaining = ABLATION_SKIN
-
-	var/entanglement = 0
