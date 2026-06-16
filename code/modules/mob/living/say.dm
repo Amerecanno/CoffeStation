@@ -73,15 +73,15 @@ var/list/channel_to_radio_key = new
 
 	if((HULK in mutations) && health >= 25 && length(message))
 		message = "[uppertext(message)]!!!"
-		verb = pick("yells", "roars", "hollers")
+		verb = pick("кричит","вопит") //INF, WAS verb = pick("yells","roars","hollers")
 		speech_problem_flag = 1
 	if(slurring)
 		message = slur(message)
-		verb = pick("slobbers", "slurs")
+		verb = "заплетается" //INF, WAS verb = pick("slobbers","slurs")
 		speech_problem_flag = 1
 	if(stuttering)
 		message = stutter(message)
-		verb = pick("stammers", "stutters")
+		verb = pick("бормочет","заикается") //INF, WAS verb = pick("stammers","stutters")
 		speech_problem_flag = 1
 
 	returns[1] = message
@@ -104,17 +104,17 @@ var/list/channel_to_radio_key = new
 
 /mob/living/proc/get_speech_ending(verb, var/ending)
 	if(ending=="!")
-		return pick("exclaims", "shouts", "yells")
+		return pick("восклицает","выкрикивает") //INF, WAS return pick("exclaims","shouts","yells")
 	else if(ending=="?")
-		return "asks"
+		return "спрашивает" //INF, WAS return "asks"
 	else if(ending=="@")
-		verb="reports"
+		verb="докладывает"
 	return verb
 
 // returns message
 /mob/living/proc/getSpeechVolume(var/message)
 	var/volume = chem_effects[CE_SPEECH_VOLUME] ? round(chem_effects[CE_SPEECH_VOLUME]) : 2	// 2 is default text size in byond chat
-	var/ending = copytext(message, length(message))
+	var/ending = copytext_char(message, length(message))
 	if(ending == "!")
 		volume ++
 	return volume
@@ -126,7 +126,7 @@ var/list/channel_to_radio_key = new
 			return
 
 	if(stat)
-		var/last_symbol = copytext(message, length(message))
+		var/last_symbol = copytext_char(message, length(message))
 		if(stat == DEAD)
 			return say_dead(message)
 		else if(last_symbol=="@")
@@ -143,20 +143,20 @@ var/list/channel_to_radio_key = new
 		to_chat(src, SPAN_DANGER("You're muzzled and cannot speak!"))
 		return
 
-	var/prefix = copytext(message,1,2)
+	var/prefix = copytext_char(message,1,2)
 	if(prefix == get_prefix_key(/decl/prefix/custom_emote))
-		return emote(copytext(message,2))
+		return emote(copytext_char(message,2))
 	if(prefix == get_prefix_key(/decl/prefix/visible_emote))
-		return custom_emote(1, copytext(message,2))
+		return custom_emote(1, copytext_char(message,2))
 
 	//parse the radio code and consume it
 	var/message_mode = parse_message_mode(message, "headset")
 	if (message_mode)
 		//it would be really nice if the parse procs could do this for us.
 		if (message_mode == "headset")
-			message = copytext(message,2)
+			message = copytext_char(message,2)
 		else
-			message = copytext(message,3)
+			message = copytext_char(message,3)
 
 	message = trim_left(message)
 
@@ -164,7 +164,7 @@ var/list/channel_to_radio_key = new
 	if(!speaking)
 		speaking = parse_language(message)
 	if(speaking)
-		message = copytext(message, 2 + length(speaking.key))
+		message = copytext_char(message, 2 + length(speaking.key))
 	else
 		speaking = get_default_language()
 
@@ -288,7 +288,8 @@ var/list/channel_to_radio_key = new
 			speech_bubble_recipients += M.client
 		M.hear_say(message, verb, speaking, alt_name, italics, src, speech_sound, sound_vol, 1)
 
-	animate_speechbubble(speech_bubble, speech_bubble_recipients, 30)
+	INVOKE_ASYNC(GLOBAL_PROC, .proc/animate_speechbubble, speech_bubble, speech_bubble_recipients, 30)
+	INVOKE_ASYNC(src, /atom/movable/proc/animate_chat, message, speaking, italics, speech_bubble_recipients, 40)
 
 	for(var/obj/O as anything in listening_obj)
 		spawn(0)
@@ -305,7 +306,7 @@ mob/proc/format_say_message(var/message = null)
 	var/list/punctuation = list("!","?",".","-","~")
 
 	///Last character in the message
-	var/last_character = copytext(message,length_char(message))
+	var/last_character = copytext_char(message,length_char(message))
 	if(!(last_character in punctuation))
 		message += "."
 	return message
@@ -329,8 +330,8 @@ mob/proc/format_say_message(var/message = null)
 	var/replacedLocation = 0
 	if(location)
 		var/findLength = length(toFind)
-		var/head = copytext(message, 1, location)
-		var/tail = copytext(message, location + findLength)
+		var/head = copytext_char(message, 1, location)
+		var/tail = copytext_char(message, location + findLength)
 		message = head + replaceWith + tail
 		replacedLocation = length(head) + length(replaceWith)
 	return list(message, replacedLocation)
@@ -339,8 +340,8 @@ mob/proc/format_say_message(var/message = null)
 	var/location = findtextEx(message, toFind)
 	var/findLength = length(toFind)
 	while(location > 0)
-		var/head = copytext(message, 1, location)
-		var/tail = copytext(message, location + findLength)
+		var/head = copytext_char(message, 1, location)
+		var/tail = copytext_char(message, location + findLength)
 		message = head + replaceWith + tail
 		location = findtextEx(message, toFind, length(head) + length(replaceWith) + 1)
 	return message
@@ -477,10 +478,10 @@ mob/proc/format_say_message(var/message = null)
 		var/list/messages = splittext(message, " ")
 		var/R = rand(1, messages.len)
 		var/heardword = messages[R]
-		if(copytext(heardword, 1, 1) in punctuation)
-			heardword = copytext(heardword, 2)
-		if(copytext(heardword, -1) in punctuation)
-			heardword = copytext(heardword, 1, length(heardword))
+		if(copytext_char(heardword, 1, 1) in punctuation)
+			heardword = copytext_char(heardword, 2)
+		if(copytext_char(heardword, -1) in punctuation)
+			heardword = copytext_char(heardword, 1, length(heardword))
 		heard = "<span class = 'game_say'>...You hear something about...[heardword]</span>"
 
 	else

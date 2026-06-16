@@ -59,7 +59,7 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 	var/allow_random_events = 0			// enables random events mid-round when set to 1
 	var/allow_ai = 0					// allow ai job
 	var/hostedby = null
-	var/respawn_delay = 30
+	var/respawn_delay = 10
 	var/guest_jobban = 1
 	var/usewhitelist = 0
 	var/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
@@ -75,7 +75,8 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 	var/use_cortical_stacks = 0			//enables neural lace
 	var/empty_server_restart_time = 0	// Time in minutes before empty server will restart
 
-	var/character_slots = 10				// The number of available character slots
+	//Evie - актуализация с оффами. Да, на оффах 30 персонажей, как у нормальных людей
+	var/character_slots = 30				// The number of available character slots
 	var/loadout_slots = 3					// The number of loadout slots per character
 
 	var/max_gear_cost = 10 // Used in chargen for accessory loadout limit. 0 disables loadout, negative allows infinite points.
@@ -233,11 +234,10 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 
 	var/webhook_url
 	var/webhook_key
-
-	var/message_announce_new_game = "A new round has begun!"	// SOJOURN: discord bot configuration
-	var/message_announce_round_end = "The round is almost over! Get ready for the next one."	// SOJOURN: discord bot configuration
-	var/channel_announce_new_game	// SOJOURN: discord bot configuration
-	var/channel_announce_end_game	// SOJOURN: discord bot configuration
+	var/message_announce_new_game = "A new round has begun!"
+	var/message_announce_round_end = "The round is almost over! Get ready for the next one."
+	var/channel_announce_new_game
+	var/channel_announce_end_game
 
 	var/profiler_permission = R_DEBUG | R_SERVER
 

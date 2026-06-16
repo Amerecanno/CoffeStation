@@ -35,10 +35,7 @@
 		STAT_VIG = 40,
 	)
 
-	perks = list(PERK_ASS_OF_CONCRETE,
-				 PERK_BLACKSHIELD_CONDITIONING,
-				 PERK_BOLT_REFLECT,
-				 PERK_CHEM_CONTRABAND)
+	perks = list(PERK_ASS_OF_CONCRETE, PERK_BLACKSHIELD_CONDITIONING, PERK_BOLT_REFLECT, PERK_CHEM_CONTRABAND)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/digitalwarrant,
@@ -147,7 +144,7 @@
 		STAT_ROB = 10,
 	)
 
-	perks = list(PERK_MEDICAL_EXPERT, PERK_BLACKSHIELD_CONDITIONING)
+	perks = list(PERK_MEDICAL_EXPERT, PERK_BLACKSHIELD_CONDITIONING, PERK_BOLT_REFLECT, PERK_CHEM_CONTRABAND)
 				// /datum/perk/chemist -Thanos Voice: "I'm sorry little one..."
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,

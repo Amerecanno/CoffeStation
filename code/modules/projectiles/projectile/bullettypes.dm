@@ -73,16 +73,15 @@
 
 /obj/item/projectile/bullet/pistol_35/rubber/soporific/New()
 	..()
-	if(!testing)
+	if (!testing)
 		create_reagents(2)
 		reagents.add_reagent(spray, 2)
 
 /obj/item/projectile/bullet/pistol_35/rubber/soporific/on_hit(atom/target, def_zone = null)
-	if(!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents)
-				reagents.trans_to_mob(L, 2, CHEM_TOUCH, copy = FALSE)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents)
+			reagents.trans_to_mob(L, 2, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/pistol_35/rubber/soporific/cbo
 	name = "soporific condensed plastic bullet"
@@ -90,11 +89,10 @@
 	can_ricochet = FALSE
 
 /obj/item/projectile/bullet/pistol_35/rubber/soporific/cbo/on_hit(atom/target, def_zone = null)
-	if(!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents)
-				L.reagents.add_reagent("stoxin", 5)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents)
+			L.reagents.add_reagent("stoxin", 5)
 
 /obj/item/projectile/bullet/pistol_35/rubber/pepperball
 	name = "pepperball"
@@ -112,11 +110,10 @@
 		reagents.add_reagent(spray, 3)
 
 /obj/item/projectile/bullet/pistol_35/rubber/pepperball/on_hit(atom/target, def_zone = null)
-	if(!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents && !testing)
-				reagents.trans_to_mob(L, 3, CHEM_TOUCH, copy = FALSE)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents && !testing)
+			reagents.trans_to_mob(L, 3, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/pistol_35/scrap
 	damage_types = list(BRUTE = 14)
@@ -233,11 +230,10 @@
 		reagents.add_reagent(spray, 3)
 
 /obj/item/projectile/bullet/magnum_40/rubber/soporific/on_hit(atom/target, def_zone = null)
-	if(!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents && !testing)
-				reagents.trans_to_mob(L, 3, CHEM_TOUCH, copy = FALSE)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents && !testing)
+			reagents.trans_to_mob(L, 3, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/magnum_40/scrap
 	damage_types = list(BRUTE = 15)
@@ -300,11 +296,10 @@
 		reagents.add_reagent(spray, 8)
 
 /obj/item/projectile/bullet/kurtz_50/rubber/pepperball/on_hit(atom/target, def_zone = null)
-	if(!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents && !testing)
-				reagents.trans_to_mob(L, 8, CHEM_TOUCH, copy = FALSE)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents && !testing)
+			reagents.trans_to_mob(L, 8, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/kurtz_50/practice
 	name = "practice bullet"
@@ -524,22 +519,21 @@
 	ignition_source = FALSE
 
 /obj/item/projectile/bullet/rifle_75/rubber/soporific
-	name = "soporific coated rubber bullet"
-	damage_types = list(BRUTE = 4, HALLOSS = 30) // Minor damage from blunt trauma, it's meant to be LTL
-	var/spray = "stoxin"
+    name = "soporific coated rubber bullet"
+    damage_types = list(BRUTE = 4, HALLOSS = 30) // Minor damage from blunt trauma, it's meant to be LTL
+    var/spray = "stoxin"
 
 /obj/item/projectile/bullet/rifle_75/rubber/soporific/New()
-	..()
-	if (!testing)
-		create_reagents(1)
-		reagents.add_reagent(spray, 1)
+    ..()
+    if (!testing)
+        create_reagents(1)
+        reagents.add_reagent(spray, 1)
 
 /obj/item/projectile/bullet/rifle_75/rubber/soporific/on_hit(atom/target, def_zone = null)
-	if (!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents && !testing)
-				reagents.trans_to_mob(L, 1, CHEM_TOUCH, copy = FALSE)
+    if(isliving(target))
+        var/mob/living/L = target
+        if(istype(L) && L.reagents && !testing)
+            reagents.trans_to_mob(L, 1, CHEM_TOUCH, copy = FALSE)
 
 /obj/item/projectile/bullet/rifle_75/lethal
 	name = "hollow-point bullet"
@@ -967,11 +961,10 @@
 		reagents.add_reagent(spray, 5)
 
 /obj/item/projectile/bullet/shotgun/beanbag/soporific/on_hit(atom/target, def_zone = null)
-	if (!testing)
-		if(isliving(target))
-			var/mob/living/L = target
-			if(istype(L) && L.reagents && !testing)
-				reagents.trans_to_mob(L, 5, CHEM_TOUCH, copy = FALSE)
+	if(isliving(target))
+		var/mob/living/L = target
+		if(istype(L) && L.reagents && !testing)
+			reagents.trans_to_mob(L, 5, CHEM_TOUCH, copy = FALSE)
 
 
 /obj/item/projectile/bullet/shotgun/practice
@@ -1285,7 +1278,7 @@
 
 /obj/item/projectile/bullet/cap
 	name = "cap"
-	damage_types = list(HALLOSS = 0)
+	damage_types = list(HALLOS = 0)
 	nodamage = TRUE
 	embed = FALSE
 	sharp = FALSE

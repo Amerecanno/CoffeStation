@@ -139,16 +139,16 @@ ADMIN_VERB_ADD(/client/proc/test_MD, R_DEBUG, null)
 	var/list/usable_email_tlds = list("nad_col.org","nadezhda.scg","nadezhda.net")
 	var/path = "nadezhda"
 
-	var/access_modify_region = list(
-		ACCESS_REGION_SECURITY = list(access_hos, access_change_ids),
-		ACCESS_REGION_MEDBAY = list(access_cmo, access_change_ids),
-		ACCESS_REGION_RESEARCH = list(access_rd, access_change_ids),
-		ACCESS_REGION_ENGINEERING = list(access_ce, access_change_ids),
-		ACCESS_REGION_COMMAND = list(access_change_ids),
-		ACCESS_REGION_GENERAL = list(access_change_ids),
-		ACCESS_REGION_SUPPLY = list(access_change_ids),
-		ACCESS_REGION_CHURCH = list(access_nt_preacher, access_change_ids),
-		ACCESS_REGION_PROSPECTOR = list(access_foreman, access_change_ids)
+	var/access_modify_region = alist(
+		ACCESS_REGION_SECURITY = alist(access_hos, access_change_ids),
+		ACCESS_REGION_MEDBAY = alist(access_cmo, access_change_ids),
+		ACCESS_REGION_RESEARCH = alist(access_rd, access_change_ids),
+		ACCESS_REGION_ENGINEERING = alist(access_ce, access_change_ids),
+		ACCESS_REGION_COMMAND = alist(access_change_ids),
+		ACCESS_REGION_GENERAL = alist(access_change_ids),
+		ACCESS_REGION_SUPPLY = alist(access_change_ids),
+		ACCESS_REGION_CHURCH = alist(access_nt_preacher, access_change_ids),
+		ACCESS_REGION_PROSPECTOR = alist(access_foreman, access_change_ids)
 	)
 
 /datum/maps_data/proc/character_save_path(var/slot)

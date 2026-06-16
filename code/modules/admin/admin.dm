@@ -551,7 +551,7 @@ ADMIN_VERB_ADD(/datum/admins/proc/access_news_network, R_ADMIN, FALSE)
 	if(!check_rights(0))
 		return
 
-	var/dat = "<center><B>Game Panel</B></center><hr>"
+	var/dat = "<html><center><B>Game Panel</B></center><hr>"
 	if(get_storyteller() && (SSticker.current_state != GAME_STATE_PREGAME))
 		dat += "<a href='byond://?src=\ref[get_storyteller()]'>Storyteller Panel</A><br>"
 	else

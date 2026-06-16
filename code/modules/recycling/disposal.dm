@@ -37,9 +37,9 @@
 /obj/machinery/disposal/Initialize(mapload, d)
 	..()
 	return INITIALIZE_HINT_LATELOAD
-	
+
 // create a new disposal
-// find the attached trunk (if present) 
+// find the attached trunk (if present)
 /obj/machinery/disposal/LateInitialize(mapload)
 	. = ..()
 
@@ -169,7 +169,7 @@
 			return
 
 		add_fingerprint(user)
-		
+
 		if(target == user)
 			user.visible_message(SPAN_DANGER("[user] starts climbing into [src]."), SPAN_DANGER("You start climbing into [src]."))
 		else
@@ -538,8 +538,8 @@
 			for(var/mob/living/H in src)
 				if(isdrone(H)) //Drones use the mailing code to move through the disposal system,
 					continue
-				//if(H.stats.getPerk(PERK_SPACE_ASSHOLE)) //Assholes gain disposal immunity
-				//	continue - SoJ edit, we dont want perfect immunity
+				if(H.stats.getPerk(PERK_SPACE_ASSHOLE)) //Assholes gain disposal immunity
+					continue //- SoJ edit, we dont want perfect immunity
 				// Hurt any living creature jumping down disposals
 				var/multiplier = 1
 
@@ -1442,5 +1442,7 @@
 		dirs = list(direction, turn(direction, -45), turn(direction, 45))
 	else
 		dirs = alldirs.Copy()
+
+	src.streak(dirs)
 
 	streak(dirs)

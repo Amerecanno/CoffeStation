@@ -3,7 +3,7 @@
 	name = "premier's gloves"  //Sprites from Eris
 	icon_state = "captain"
 	item_state = "captain"
-	armor_list = list(melee = 6, bullet = 2, energy = 6, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 6, bullet = 2, energy = 6, bomb = 10, bio = 10, rad = 0)
 	price_tag = 250
 
 /obj/item/clothing/gloves/runed
@@ -25,7 +25,7 @@
 	name = "insulated gloves"
 	icon_state = "yellow"
 	item_state = "yellow"
-	armor_list = list(melee = 0, bullet = 0, energy = 3, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 0, bullet = 0, energy = 3, bomb = 0, bio = 50, rad = 0)
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	price_tag = 200
@@ -62,7 +62,7 @@
 	name = "thick gloves"
 	icon_state = "black"
 	item_state = "black"
-	armor_list = list(melee = 5, bullet = 0, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 5, bullet = 0, energy = 5, bomb = 10, bio = 10, rad = 0)
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.05
 	price_tag = 100
@@ -83,7 +83,7 @@
 	desc = "A pair of modified work gloves with some steel."
 	icon_state = "hm_combat"
 	item_state = "hm_combat"
-	armor_list = list(melee = 6, bullet = 1, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 6, bullet = 1, energy = 5, bomb = 10, bio = 10, rad = 0)
 	siemens_coefficient = 0.6
 	price_tag = 150
 
@@ -109,7 +109,7 @@
 /obj/item/clothing/gloves/thick/ablative
 	name = "ablative gloves"
 	desc = "A thick pair of gloves that excel at protecting the wearer against energy projectiles."
-	armor_list = list(melee = 2, bullet = 2, energy = 17, bomb = 30, bio = 10, rad = 0)
+	armor_list = list(melee = 3, bullet = 3, energy = 15, bomb = 10, bio = 10, rad = 0)
 	icon_state = "ihscombat"
 	item_state = "ihscombat"
 	price_tag = 150
@@ -117,6 +117,8 @@
 
 /obj/item/clothing/gloves/thick/ablative/militia
 	name = "militia ablative gloves"
+	desc = "A thick pair of gloves that excel at protecting the wearer against energy projectiles."
+	armor_list = list(melee = 3, bullet = 3, energy = 15, bomb = 10, bio = 10, rad = 0)
 	icon_state = "bs_ablative"
 	item_state = "ihscombat"
 
@@ -129,7 +131,7 @@
 	desc = "A pair of heavy duty gauntlets designed with high-grade bulletproof materials."
 	icon_state = "bs_bulletproof"
 	item_state = "ihscombat"
-	armor_list = list(melee = 2, bullet = 15, energy = 2, bomb = 10, bio = 0, rad = 0)
+	armor_list = list(melee = 3, bullet = 15, energy = 3, bomb = 10, bio = 10, rad = 0)
 
 /obj/item/clothing/gloves/thick/swat/blackshield_corpsman
 	name = "corpsman combat gloves"
@@ -137,7 +139,7 @@
 	These have added insulated gloves sacerficing some of its protection to be better suited to deal with eletrical work under less then ideal cases." // No lying, it's not anti-germs.
 	icon_state = "corpsman_base_gloves"
 	item_state = "corpsman_base_gloves"
-	armor_list = list(melee = 6, bullet = 5, energy = 5, bomb = 0, bio = 15, rad = 0)
+	armor_list = list(melee = 5, bullet = 5, energy = 5, bomb = 10, bio = 30, rad = 0)
 	siemens_coefficient = 0
 	price_tag = 250
 
@@ -175,7 +177,7 @@
 	These have added insulated gloves sacerficing some of its protection to be better suited to deal with eletrical work under less then ideal cases."
 	icon_state = "bs_base_gloves"
 	item_state = "bs_base_gloves"
-	armor_list = list(melee = 6, bullet = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 5, bullet = 5, energy = 5, bomb = 10, bio = 10, rad = 0)
 	siemens_coefficient = 0
 	price_tag = 250
 
@@ -212,7 +214,7 @@
 	name = "combat gloves"
 	icon_state = "black"
 	item_state = "black"
-	armor_list = list(melee = 6, bullet = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor_list = list(melee = 5, bullet = 5, energy = 5, bomb = 10, bio = 30, rad = 0)
 	siemens_coefficient = 0
 	price_tag = 250
 

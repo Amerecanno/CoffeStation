@@ -591,8 +591,8 @@
 /obj/jtb_generator/proc/generate_asteroid(var/core_min = 2, var/core_max = 5)
 	var/datum/rogue/asteroid/A = new(rand(core_min,core_max))
 
-	for(var/x = 1; x <= A.coresize, x++)
-		for(var/y = 1; y <= A.coresize, y++)
+	for(var/x = 1; x <= A.coresize; x++)
+		for(var/y = 1; y <= A.coresize; y++)
 			A.spot_add(A.coresize+x, A.coresize+y, A.type_wall)
 
 

@@ -115,14 +115,14 @@
 		if(!neighbor.density && istype(neighbor, /turf/simulated))
 			var/turf/simulated/redefined_turf = neighbor
 			var/turf_zone = redefined_turf.zone
-			tile_info[cardinal] = list(
+			tile_info[cardinal] = alist(
 				FIREDOOR_TURF = redefined_turf,
 				FIREDOOR_ATMOS = FALSE,
 				FIREDOOR_ALERT = FALSE
 			)
 			registered_zas_zones[cardinal] = turf_zone
 		else
-			tile_info[cardinal] =  list(
+			tile_info[cardinal] =  alist(
 				FIREDOOR_TURF = neighbor,
 				FIREDOOR_ATMOS = FALSE,
 				FIREDOOR_ALERT = FALSE

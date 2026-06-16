@@ -15,7 +15,7 @@
 	ideal_character_age = 40
 	minimum_character_age = 30
 	department_account_access = TRUE
-	playtimerequired = 2500
+	playtimerequired = 1200
 	health_modifier = 25
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_CHURCHSYNTH, FORM_NASHEF)
 
@@ -46,7 +46,7 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-	description = "The Warrant Officer serves as the head officer of the local regiment of the Marshals.<br>\
+	description = "Прапорщик служит старшим офицером местного полка маршалов.<br>\
 	Contracted to protect and serve the colony, your internal police force is dedicated to the fight against criminal elements.<br>\
 	Your main objective is to keep everyone safe by maintaining order, and upholding laws of all manner within the colony.<br>\
 	The Blackshield Commander is your ally and you should work closely with them - they provide the muscle and guns to defend the colony."
@@ -77,7 +77,7 @@
 	department_account_access = TRUE
 	wage = WAGE_LABOUR_HAZARD
 	minimum_character_age = 25
-	playtimerequired = 1200
+	playtimerequired = 600
 	health_modifier = 20
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
@@ -104,16 +104,17 @@
 				 /datum/perk/chem_contraband,
 				 /datum/perk/gunsmith)
 
-	description = "The Supply Specialist is the right hand of the warrant officer and the defacto controller of the armory and armory shop. <br>\
-	Your role is mainly a desk job - with duties rarely taking you outside of the colony or even the armory.<br>\
-	You will often be called to sell weaponry and armory to colonists, maintaining the stock of the equipment and tracking who has what.<br>\
-	You will also be often asked to watch or process prisoners. Perform regular checkups on anyone locked in the brig - breakouts are intolerable.<br>\
-	In quieter times, you serve as the on-site weapons instructor. Take the initiative to offer a variety of training drills, especially to junior operatives.<br>\
-	Remember that any Warrant Officer duties may be delegated to you if they wish and internal tasks will fall to you at times."
+	description = "Специалист по снабжению является правой рукой прапорщика и фактическим контролером оружейной палаты и оружейного магазина. <br>\
+	Ваша роль - это в основном кабинетная работа, и обязанности редко выводят вас за пределы колонии или даже арсенала.<br>\
+	Вас часто будут призывать продавать оружие и оружейный склад колонистам, поддерживая запасы оборудования и отслеживая, у кого что есть.<br>\
+	Вас также часто будут просить присматривать за заключенными или обрабатывать их. Проводите регулярные осмотры всех, кто заперт на гауптвахте - побеги недопустимы.<br>\
+	В более спокойные времена вы выступаете в качестве инструктора по оружию на месте. Проявите инициативу и предложите разнообразные учебные упражнения, особенно для младших сотрудников.<br>\
+	Помните, что любые обязанности прапорщика могут быть делегированы вам, если они пожелают, и иногда на вас будут ложиться внутренние задачи."
 
-	duties = "Manage a good balance of armory stock, and dispense responsibly with a paper trail and fair price.<br>\
-	Monitor prisoners in the brig to ensure their health and safety.<br>\
-	Perform training drills and other exercises to bring the Marshals up to standard."
+	duties = "Управляйте хорошим балансом запасов оружия и ответственно относитесь к бумажному следу и справедливой цене.<br>\
+	Следите за заключенными на гауптвахте, чтобы обеспечить их здоровье и безопасность.<br>\
+	Выполняйте учебные упражнения и другие упражнения, чтобы привести маршалов в соответствие со стандартами."
+
 
 /obj/landmark/join/start/supsec
 	name = "Supply Specialist"
@@ -134,7 +135,6 @@
 	alt_titles = list("Junior Ranger","Detective","Forensics Specialist")
 	selection_color = "#a7bbc6"
 	wage = WAGE_PROFESSIONAL
-	playtimerequired = 1200
 	health_modifier = 5
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
 
@@ -162,16 +162,16 @@
 							 /datum/computer_file/program/audio,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "The Ranger is the colony detective and field agent, taking on cases and suspects that aren't always what they seem.<br>\
-	Your job is to interrogate suspects, gather witness statements,  harvest evidence and reach a conclusion about the nature and culprit of a crime.<br>\
-	You are a higher ranking position than officers and operatives and can determine if charges are valid and may release individuals for lack of evidence. <br>\
-	However, you cannot give orders outside those pertaining to charges and arrests. The warrant officer still outranks you - bring all conflicts to them.<br>\
-	When there are no outstanding cases, look for them. Mingle with civilians, interact and converse, sniff out leads about potential criminal activity."
+	description = "Рейнджер - детектив колонии и полевой агент, берущийся за дела и подозреваемых, которые не всегда являются тем, чем кажутся.<br>\
+	Ваша задача - допрашивать подозреваемых, собирать свидетельские показания, собирать улики и делать выводы о характере и виновнике преступления.<br>\
+	Вы занимаете более высокое положение, чем офицеры и оперативники, и можете определить, обоснованы ли обвинения, и можете освободить отдельных лиц за отсутствием доказательств. <br>\
+	Однако вы не можете отдавать приказы, кроме тех, которые касаются обвинений и арестов. Маршалы по-прежнему выше вас по званию - передайте все конфликты им.<br>\
+	Когда нет нерешенных дел, ищите их. Общайтесь с гражданскими лицами, взаимодействуйте и беседуйте, вынюхивайте зацепки о потенциальной преступной деятельности."
 
-	duties = "Interview suspects and witnesses after a crime. Record important details of their statements, and look for inconsistencies.<br>\
-		Gather evidence and bring it back for processing.<br>\
-		Send out officers to bring suspects in for questioning.<br>\
-		Interact with civilians and be on the lookout for criminal activity."
+	duties = "Опрашивайте подозреваемых и свидетелей после совершенных преступлений. Записывайте важные детали их заявлений и ищите несоответствия.<br>\
+		Соберите доказательства и верните их обратно для обработки.<br>\
+		Отправьте офицеров, чтобы они доставили подозреваемых на допрос.<br>\
+		Взаимодействуйте с гражданскими лицами и будьте начеку в поисках преступной деятельности."
 
 /obj/landmark/join/start/inspector
 	name = "Ranger"
@@ -198,6 +198,56 @@
 	playtimerequired = 240
 
 	outfit_type = /decl/hierarchy/outfit/job/security/ihoper
+
+	access = list(
+		access_security, access_moebius, access_engine, access_mailsorting, access_eva, access_forensics_lockers, access_medspec,
+		access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_prospector, access_kitchen, access_medical_suits
+	)
+
+	stat_modifiers = list(
+		STAT_ROB = 25,
+		STAT_TGH = 25,
+		STAT_VIG = 20,
+	)
+
+	perks = list(PERK_CODESPEAK, PERK_CHEM_CONTRABAND)
+
+	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
+							 /datum/computer_file/program/camera_monitor)
+
+	description = "Офицер-маршал составляет основную массу маршалов, обеспечивая внутреннее соблюдение закона и поддерживая мир.<br>\
+	Ожидается, что вы будете решателем проблем, который сможет деэскалировать ситуации, достигать мирных соглашений и поддерживать общественное доверие.<br>\
+	Держите свое оружие в кобуре, если ситуация не требует иного - проявите здравый смысл и следуйте приказам Чёрного Щита.<br>\
+	Когда нет постоянных приказов, ваша постоянная задача - патрулировать колонию и быть начеку в поисках угроз или проблем.<br>\
+	Регистрируйтесь в отделениях и наблюдайте за главными воротами. У вас есть доступ в большинство мест, чтобы помочь с вашими обязанностями - не злоупотребляйте этим."
+
+	duties = "Патрулируйте колонию, обеспечивайте безопасность и ищите неприятности.<br>\
+		Разбирайтесь с внутренними угрозами колонии, такими как преступники, саботажники и все, что угрожает колонистам.<br>\
+		Убедитесь, что люди соблюдают закон и СОП для поддержания порядка.<br>\
+		Выполняйте приказы по цепочке командования.<br>\
+		Подчиняйтесь закону. Вы не выше этого."
+
+/obj/landmark/join/start/officer
+	name = "Marshal Officer"
+	icon_state = "player-blue"
+	join_tag = /datum/job/officer
+
+/datum/job/officerjr
+	title = "Marshal Junior Officer"
+	flag = OFFICERJR
+	department = DEPARTMENT_SECURITY
+	department_flag = SECURITY
+	faction = MAP_FACTION
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Warrant Officer"
+	difficulty = "Hard."
+	selection_color = "#a7bbc6"
+	wage = WAGE_LABOUR_INTERN
+	health_modifier = 10
+	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_NASHEF)
+
+	outfit_type = /decl/hierarchy/outfit/job/security/ihoper/jr
 
 	access = list(
 		access_security, access_moebius, access_engine, access_mailsorting, access_eva, access_forensics_lockers, access_medspec,
