@@ -265,13 +265,23 @@
 #define PERK_ARMOR_REDUCTION /datum/perk/cooldown/armor_reduction
 #define PERK_ARMOR_UP /datum/perk/cooldown/armor_up
 #define PERK_CONTEMPT_GAZE /datum/perk/cooldown/contempt_gaze
+#define PERK_WEALTH_INDEX /datum/perk/cooldown/wealth_index
+#define PERK_MALICE_WEEVE /datum/perk/cooldown/malice_of_weeve
 //Anti-art
 #define PERK_ARTIST_NO /datum/perk/cooldown/artist_no
 //Church Cooldown
 #define PERK_JUDGMENT_HASTE /datum/perk/cooldown/judgment_haste
 
-
+// Weapon Arts
 #define PERK_IGA /datum/perk/cooldown/ignis_gladius_artium
+
+#define PERK_NT_SWORDS /datum/perk/cooldown/nt_swords
+#define PERK_NT_SHIELD /datum/perk/cooldown/nt_shield
+#define PERK_NT_DAGGER /datum/perk/cooldown/nt_dagger
+#define PERK_NT_HAMMER /datum/perk/cooldown/nt_hammer
+#define PERK_NT_SPEARS /datum/perk/cooldown/nt_spears
+#define PERK_NT_FURIOSO /datum/perk/cooldown/nt_furioso
+
 ////////////////////
 //Stillpoint perks//
 ////////////////////
