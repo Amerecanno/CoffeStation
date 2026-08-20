@@ -136,10 +136,6 @@ var/game_id
 
 	call_restart_webhook()
 
-/// Initializes TGS and loads the returned revising info into GLOB.revdata
-/world/proc/InitTgs()
-	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
-	GLOB.revdata.load_tgs_info()
 
 /world/proc/HandleTestRun()
 	//trigger things to run the whole process

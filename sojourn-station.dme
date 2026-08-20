@@ -90,7 +90,7 @@
 #include "code\__DEFINES\subsystems-priority.dm"
 #include "code\__DEFINES\subsystems.dm"
 #include "code\__DEFINES\targeting.dm"
-#include "code\__DEFINES\tgs.dm"
+
 #include "code\__DEFINES\tgui.dm"
 #include "code\__DEFINES\time.dm"
 #include "code\__DEFINES\tools_and_qualities.dm"
@@ -339,7 +339,7 @@
 #include "code\datums\ruins.dm"
 #include "code\datums\security_state.dm"
 #include "code\datums\sound_player.dm"
-#include "code\datums\tgs_event_handler.dm"
+
 #include "code\datums\verb_callbacks.dm"
 #include "code\datums\weakref.dm"
 #include "code\datums\ai\ai_holo.dm"
